@@ -1,0 +1,13 @@
+.DS_Store
+hugo_osx
+resources
+assets
+_gen
+start_osx.sh
+.vscode
+node_modules
+package-lock.json
+package.json
+.env
+public/*
+themes/*
