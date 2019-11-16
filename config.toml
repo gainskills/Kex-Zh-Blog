@@ -104,14 +104,14 @@ section = [ "HTML", "RSS"]
   title =  "EVE-NG"
   href =  "http://eve-ng.net/"
   [[params.bookmark_link]]
-  title =  "技术改变世界-孔今贤的博客"
-  href =  "https://lingxiankong.github.io"
-  [[params.bookmark_link]]
   title =  "Huabing's Blog"
   href =  "https://zhaohuabing.com"
   [[params.bookmark_link]]
   title =  "TUALATRIX's Blog"
   href =  "https://imtx.me/"
+  [[params.bookmark_link]]
+  title =  "技术改变世界-孔今贤的博客"
+  href =  "https://lingxiankong.github.io"
 
 [outputFormats.Algolia]
 baseName = "algolia"

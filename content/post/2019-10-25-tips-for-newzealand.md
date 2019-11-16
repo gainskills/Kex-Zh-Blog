@@ -2,7 +2,7 @@
 title:      "Tips for NewZealand"
 Lang: "zh"
 subtitle:   ""
-description: "Info about NZ's Food, Places, etc."
+description: "Info about Food, Places, etc. in New Zealand"
 date:       2019-10-25
 tags:
     - Tip
