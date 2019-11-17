@@ -104,6 +104,12 @@ Successfully installed pip-19.3.1{{</ highlight >}}
 
     - Active virtual environment in VSCode
 
+        Launch VSCode and install the Extension: [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+
+        {{< imgproc imgPath="2019/11/01-ext-opt.png" alt="Install Extension" max-height="280" >}}
+
+        **Note**: Pay attention to the prompt of 'Install' button because restart MS VScode might be required
+
         {{< imgproc imgPath="2019/11/01-open-1-opt.png" alt="Open folder-1" max-height="120" >}}
 
         {{< imgproc imgPath="2019/11/01-open-2-opt.png" alt="Open folder-2" max-height="300" >}}
