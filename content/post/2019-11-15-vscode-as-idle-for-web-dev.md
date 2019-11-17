@@ -7,6 +7,7 @@ tags:
     - Django
     - Web
     - Python
+    - MS VSCode
 categories:
     - Code
 published: true
@@ -21,7 +22,7 @@ reward: true
 I documented two articles about the IDLE for Python development before:
 
 - [A tutorial about setup Sublime Text with Anaconda and multiple Python versions](/2016/06/07/python-sublimetext-anaconda/)
-- [MS VS Code for Python debug](https://www.slideshare.net/69444091/vs-code-debug?ref=https://www.slideshare.net/69444091/slideshelf)
+- [MS VS Code for Python debug](/2016/11/10/vscode-for-python-debug/)
 
 This is another one to using MS VSCode as Django IDLE (OS: Mac OX, the steps are referenceable on Linux, Windows).
 
