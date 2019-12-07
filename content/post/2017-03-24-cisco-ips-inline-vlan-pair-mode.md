@@ -8,7 +8,7 @@ tags:
     - Simulator
     - Cisco IPS
     - Security
-published: true 
+published: true
 image:      ""
 postWithImg: true
 categories:
@@ -25,7 +25,7 @@ URL: "/2017/03/24/cisco-ips-inline-vlan-pair-mode/"
 
     and met the issue:
 
-    Cisco IPS failed to ping anything out of it, I run traffic capture on IPS’s interface, no packet out when I execute ping command.
+    Cisco IPS failed to ping anything out of it, I run traffic capture on IPS’s interface, no packet out when I execute the ping command.
 
     Related [post](http://www.unetlab.com/forum/viewtopic.php?f=5&t=55&sid=25184c5b3a889925218c20bffb2f180f) on EVE official forum, and the official answer is: This image is corrupted and not working neither on UNL nor EVE
 
@@ -55,11 +55,11 @@ URL: "/2017/03/24/cisco-ips-inline-vlan-pair-mode/"
 
     {{< imgproc imgPath="2017/03/6-opt.png" alt="Console" max-height="120" >}}
 
-    Default username/password is cisco/ciscoips123
+    The default username/password is cisco/ciscoips123
 
-    then enter command ‘setup‘ to initial the device.
+    then enter the command ‘setup‘ to initial the device.
 
-    The most import thing is to disable HTTPS. Cisco IPS enabled https by default and its cert was not supported by most browsers(Chrome/Firefox/IE) now. Execute following commands:
+    The most import thing is to disable HTTPS. Cisco IPS enabled https by default and its cert was not supported by most browsers(Chrome/Firefox/IE) now. Execute the following commands:
 
     ~~~bash
     service web-server
@@ -68,7 +68,7 @@ URL: "/2017/03/24/cisco-ips-inline-vlan-pair-mode/"
     exit
     ~~~
 
-    Then access IPS by http, it will prompt you to lunch IDSM(* Java required)
+    Then access IPS by HTTP, it will prompt you to lunch IDSM(* Java required)
 
     {{< imgproc imgPath="2017/03/7-opt.png" alt="IPs DM" max-height="320" >}}
 

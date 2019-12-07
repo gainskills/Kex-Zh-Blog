@@ -56,7 +56,7 @@ def minTowords(tempm):
     )
 ~~~
 
-Unfortunately, it run into following error when the minute number is less than 10:
+Unfortunately, it runs into the following error when the minute number is less than 10:
 
 ~~~Python
 minTowords(3)
@@ -81,7 +81,7 @@ def minTowords(tempm):
     )
 ~~~
 
-with same error:
+with the same error:
 
 ~~~python
 minTowords(3)

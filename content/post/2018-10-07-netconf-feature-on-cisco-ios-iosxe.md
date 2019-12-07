@@ -22,7 +22,7 @@ categories:
 reward: true
 URL: "/2018/10/07/netconf-feature-on-cisco-ios-iosxe/"
 ---
-I tried to see how ansible works with the netconf feature on Cisco and Juniper in past days: [Juniper’s official document](https://www.juniper.net/documentation/en_US/junos/topics/topic-map/netconf-ssh-connection.html) is clear and easy to follow. but for Cisco, I followed [NETCONF over SSHv2](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/cns/configuration/xe-3s/cns-xe-3s-book/netconf-sshv2.pdf), unfortunately, I was stuck on it for 6 days.
+I tried to see how Ansible works with the netconf feature on Cisco and Juniper in past days: [Juniper’s official document](https://www.juniper.net/documentation/en_US/junos/topics/topic-map/netconf-ssh-connection.html) is clear and easy to follow. but for Cisco, I followed [NETCONF over SSHv2](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/cns/configuration/xe-3s/cns-xe-3s-book/netconf-sshv2.pdf), unfortunately, I was stuck on it for 6 days.
 
 **OS Version**
 

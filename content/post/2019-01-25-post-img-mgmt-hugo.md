@@ -28,7 +28,7 @@ I introduced [why](2019/01/01/hello-world/) I migrate my blog to github and Hugo
 
 ### Before start
 
-All images will be compressed before I upload them for post. There are many tools could do this, such as [tinypng](https://tinypng.com/), [UPNG](http://upng.photopea.com/). My choice is Tinypng because it supports variety formats and its [API](https://tinypng.com/developers/reference#{tpath(%22/developers%22)}).
+All images will be compressed before I upload them for the post. Many tools that could do this, such as [tinypng](https://tinypng.com/), [UPNG](http://upng.photopea.com/). My choice is Tinypng because it supports variety formats and its [API](https://tinypng.com/developers/reference#{tpath(%22/developers%22)}).
 
 {{< imgproc imgPath="2019/01/01-opt.png" alt="img compression (20M to 5.1M)" max-height="400" >}}
 
@@ -75,7 +75,7 @@ if __name__ == "__main__":
 
 ### Manage the image in post with markdown
 
-Refer to this [Guide](https://learn.netlify.com/en/cont/markdown/#images), it's the most easiest way:
+Refer to this [Guide](https://learn.netlify.com/en/cont/markdown/#images), it's the easiest way:
 
 1. Save the image file to folder _static/img_
 2. Link image in post file with the markdown:
@@ -100,7 +100,7 @@ Refer to this [Guide](https://learn.netlify.com/en/cont/markdown/#images), it's 
 
 From my understanding, as the [guide](https://learn.netlify.com/en/cont/markdown/#resizing-image) described, extra work should be needed for images resize with HTTP parameters, I didn't dig deeper on this.
 
-### Manage the image in post with html code
+### Manage the image in post with HTML code
 
 - For image without link:
 
@@ -128,7 +128,7 @@ _Note: <br>A [sample](https://raw.githubusercontent.com/gainskills/Kex-Zh-Blog/m
 The thing is [Shortcode](https://gohugo.io/content-management/shortcodes/) and [Image Processing](https://gohugo.io/content-management/image-processing/) module enable Hugo to create responsive images:
 
 1. Customize the behavior and style to view the image
-2. Resize and crop the image to proper size and quality for different view
+2. Resize and crop the image to the proper size and quality for a different view
 
 Make a long story short, shared my customization as an example
 
@@ -182,20 +182,20 @@ postWithImg: true
 {{< /highlight >}}
     * Line1: Different to markdown and html part, the images were saved to _/assets/_ folder so that _resources.Get_ function could load the image file by path. The _printf_ function joins two parameters to one string for _resources.Get_ function.
     * Line 3: Initial the full url of the image for _imageConfig_ function (Line 9)
-    * Line 5-7: Generate an image from original image by the max-height value which was defined in the markdown file, quality to 20
+    * Line 5-7: Generate an image from the original image by the max-height value which was defined in the markdown file, quality to 20
     * Line 9-10: Get the hight info of the original image file with [_imageConfig_](https://gohugo.io/functions/imageconfig/)
-    * Line 11-17: Check the height of the original image file, and generate a new file with quality value: 20. The height of new image will be 550px if the value of the origin is larger than 550px.
+    * Line 11-17: Check the height of the original image file, and generate a new file with quality value: 20. The height of the new image will be 550px if the value of the original is larger than 550px.
     * Line 21-23: Call [fancybox](https://codepen.io/fancyapps/pen/EeqJPG?editors=1000) and bootstrap for image (Refer to [_layouts/partials/head.html_](https://github.com/gainskills/hugo-theme-cleanwhite/blob/e94268ebf3418d9d51d0cbee6fc0efd7af718b2a/layouts/partials/head.html) for jQuery and fancybox files)
 
     **Note:**
 
-    - For the post with multiple images, failure might happens because [Hugo timeout mechanism](https://gohugo.io/getting-started/configuration/). Changing _timeout_ in global configuration (config.toml) could be the resolution:
+    - For the post with multiple images, failure might happen because of [Hugo timeout mechanism](https://gohugo.io/getting-started/configuration/). Changing _timeout_ in global configuration (config.toml) could be the resolution:
 
         ~~~toml
         timeout = 30000
         ~~~
 
-    - The short code is also an example of [Hugo - Creating a resource from a string](https://gohugo.io/hugo-pipes/resource-from-string/)
+    - The shortcode is also an example of [Hugo - Creating a resource from a string](https://gohugo.io/hugo-pipes/resource-from-string/)
 
 4. A [live demo]((/2018/12/26/jenkins-xcode-plugin-parameterized-project/)).
 
@@ -203,9 +203,9 @@ postWithImg: true
 
 Update @ Mar-09-2019
 
-This part was refer to [Lazy load images with zero Javascript](https://medium.com/@filipvitas/lazy-load-images-with-zero-javascript-2c5bcb691274)
+This part was referred to [Lazy load images with zero Javascript](https://medium.com/@filipvitas/lazy-load-images-with-zero-javascript-2c5bcb691274)
 
-1. Add the class <code>img-lazyload</code> in Hugo shortcode for lazy load
+1. Add the class ```img-lazyload``` in Hugo shortcode for lazy load
     {{< highlight html >}}
         <img data-src="{{ $pageimage.RelPermalink }}" class="img-responsive img-lazyload" alt={{ .Get "alt" }} style="height: {{$pageimage.Height}}px;"/>{{</ highlight >}}
 
@@ -236,9 +236,9 @@ This part was refer to [Lazy load images with zero Javascript](https://medium.co
 </script>
 {{end}}{{</ highlight >}}
 
-3. Link <code>lodash</code>
+3. Link ```lodash```
 
-    Add the link in [head.html](https://github.com/gainskills/hugo-theme-cleanwhite/blob/master/layouts/partials/head.html), otherwise it will run into the error: [<code>ReferenceError: _ is not defined</code>](https://stackoverflow.com/questions/13556010/referenceerror-is-not-defined)
+    Add the link in [head.html](https://github.com/gainskills/hugo-theme-cleanwhite/blob/master/layouts/partials/head.html), otherwise, it will run into the error: [```ReferenceError: _ is not defined```](https://stackoverflow.com/questions/13556010/referenceerror-is-not-defined)
 
     {{< highlight html >}}
     <!-- JS/CSS for postimg -->

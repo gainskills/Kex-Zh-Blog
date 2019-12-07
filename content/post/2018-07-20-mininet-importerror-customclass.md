@@ -30,7 +30,7 @@ Checked the py file: ~/mininet/mininet/util.py and miniedity.py, find nothing is
 
 Suddenly I found the version is not the version I wanted to install (I forgot to take a screenshot, the version should be 2.2.2daily something).
 
-I guess there must be something wrong with the latest version, or there are something conflict with my previous version (mininet 2.0.0 was installed on the PC before).
+I guess there must be something wrong with the latest version, or there is something conflict with my previous version (mininet 2.0.0 was installed on the PC before).
 
 **Resolution:**
 

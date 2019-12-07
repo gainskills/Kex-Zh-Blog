@@ -9,7 +9,7 @@ tags:
     - Simulator
     - Route
     - Tip
-published: true 
+published: true
 image:      ""
 postWithImg: true
 categories:
@@ -26,7 +26,7 @@ I wrote down this article in 2009-03-13 when I was looking for my first job. Tak
 ##### Configuration
 
 1. Configured IP addresses on the routers<br>
-    Note: The subnets of R1's Loopback1 and R2's Loopback1 belongs the class A address.
+    Note: The subnets of R1's Loopback1 and R2's Loopback1 belong to the class A address.
 2. Execute command "ip classless" on both R1 and R2 (The command has been the default since IOS 11.3)
 3. Configure static routes
 
@@ -38,7 +38,7 @@ R2(config)#ip route 10.1.1.0 255.255.255.0 192.168.12.1 {{< /highlight >}}
 4. Ping
 
     {{< highlight bash >}}
-R1#ping 2.2.2.2 
+R1#ping 2.2.2.2
 Type escape sequence to abort.
 Sending 5, 100-byte ICMP Echos to 2.2.2.2, timeout is 2 seconds:
 !!!!!
@@ -49,7 +49,7 @@ Sending 5, 100-byte ICMP Echos to 10.2.2.2, timeout is 2 seconds:
 !!!!!
 Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/3 ms{{< /highlight >}}
 
-5. no ip classless
+5. no IP classless
 
     {{< highlight bash >}}
 R1(config)#no ip classless{{< /highlight >}}
@@ -92,9 +92,9 @@ L        192.168.12.1/32 is directly connected, Ethernet0/0{{< /highlight >}}
 
 ##### Conclusion
 
-With the default route: 0.0.0.0/0, The connectivity from R1 to 10.2.2.0/24 (on R2) depends on the command: <code>ip classless</code>.
+With the default route: 0.0.0.0/0, The connectivity from R1 to 10.2.2.0/24 (on R2) depends on the command: ```ip classless```.
 
 - With 'ip classless'<br>
-    The packets will be forwarded by following default route.
+    The packets will be forwarded by following the default route.
 - With '**no** ip classless'<br>
-    If the route entry of class A exists in the route table, the router will forward the packets by following the entry instead of default route.
+    If the route entry of class A exists in the routing table, the router will forward the packets by following the entry instead of the default route.

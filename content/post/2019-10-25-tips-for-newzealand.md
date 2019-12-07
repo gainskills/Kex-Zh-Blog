@@ -4,6 +4,7 @@ Lang: "zh"
 subtitle:   ""
 description: "Info about Food, Places, etc. in New Zealand"
 date:       2019-10-25
+lastmod:	2020-10-04
 tags:
     - Tip
 published: true
@@ -103,7 +104,7 @@ URL: "/2019/10/25/tips-for-newzealand/"
 	* 证件照比平常的照片贵，熟悉photoshop的盆友可以创建6 * 4 inch 的画
     板，自己做好后去warehouse stationary打印快照，35 cent一张
 
-- 好吃
+- 好吃的
 
 	- 中餐
 
@@ -151,3 +152,18 @@ URL: "/2019/10/25/tips-for-newzealand/"
     （如，一份工作就够分数的话，可以不填写其它的工作）
 
 	    * [Health Report](https://www.immigration.govt.nz/new-zealand-visas/apply-for-a-visa/tools-and-information/medical-info/when-you-need-an-x-ray-or-medical-examination) - 3年内因申请其它签证提交过的，可以不要再提交
+
+- 活动
+
+	* 高尔夫
+
+		新西兰因为景色、气候宜人，有很多高尔夫球场，参与这项运动的门槛不算高。
+
+		- Drive
+
+			* 暂无
+
+		- 下场
+
+			* 防水的鞋子
+			* 发球时，确保视野内没有人

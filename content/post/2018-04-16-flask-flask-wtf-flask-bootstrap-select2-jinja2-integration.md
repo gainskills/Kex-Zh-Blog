@@ -19,7 +19,7 @@ categories:
 reward: true
 URL: "/2018/04/16/flask-flask-wtf-flask-bootstrap-select2-jinja2-integration/"
 ---
-I intend to acquire the Python skill on web after years' work on data processing, so I started with [Flask](http://flask.pocoo.org/) by following Miguel [Grinberg's instruction](https://blog.miguelgrinberg.com/author/Miguel%20Grinberg): [The Flask Mega](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world), you can learn how to integrate bootstrap with your project from it.
+I intend to acquire the Python skill on web after years' work on data processing, so I started with [Flask](http://flask.pocoo.org/) by the following Miguel [Grinberg's instruction](https://blog.miguelgrinberg.com/author/Miguel%20Grinberg): [The Flask Mega](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world), you can learn how to integrate bootstrap with your project from it.
 
 After that, you can learn how to integrate select2 with your project by reading [Flask Web开发:用Select2实现类似知乎的标签系统](https://blog.csdn.net/zheng_integer/article/details/59507942) as a guide.
 
@@ -43,18 +43,18 @@ Packages:
 
 I met this error at the start of integration, and found my answer from stackoverflow (See my code in Q2 part):
 
-> This error raises if your js files where you have bounded the select2 with select box is loading before select2 js files. Please make sure files should be in this order like..
+> This error raises if your js files where you have bounded the select2 with a select box is loading before select2 js files. Please make sure files should be in this order like:
 > - Jquery
 > - select2 js
 > - your js
 
-I found that jquery was loaded twice from developer Tools even if I have linked it in header, this has been mentioned in [Flask Bootstrap official guide](https://pythonhosted.org/Flask-Bootstrap/faq.html#why-is-bootstrap-javascript-not-loading):
+I found that jquery was loaded twice from developer Tools even if I have linked it in the header, this has been mentioned in [Flask Bootstrap official guide](https://pythonhosted.org/Flask-Bootstrap/faq.html#why-is-bootstrap-javascript-not-loading):
 
 >An easy-to-miss quirk are the block names: While there is a block named body, it usually is not the one you want to replace, use content instead. Currently, javascript is loaded at the end of the tag by default).
 
-#### 2. Flask renders the header of html twice
+#### 2. Flask renders the header of HTML twice
 
-The resolution for Q1 and Q2 are more like a trick about how to use Flask Bootstrap blocks.
+The resolution for Q1 and Q2 is more like a trick about how to use Flask Bootstrap blocks.
 
 Here is my code:
 
@@ -109,7 +109,7 @@ Here is my code:
 
 #### 3. Flask-WTF and wtforms_sqlalchemy
 
-I met following error when I try to organize _select_'s data from db query result
+I met the following error when I try to organize _select_'s data from DB query result
 
 ~~~python
 cls, key = identity_key(instance=obj)

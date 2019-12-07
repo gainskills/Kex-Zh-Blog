@@ -1,7 +1,7 @@
 ---
 title:      "Python operator:single star(*)"
 subtitle:   ""
-description: "A summary after read a block of pseudo code"
+description: "A summary after reading a block of pseudo code"
 date:       2019-02-09
 lastmod:    2019-08-25
 tags:
@@ -45,7 +45,7 @@ for i in d:
 (2, 5)
 (3, 6){{< /highlight >}}
 
-    There is nothing was outputted by line8: <code>print(i)</code>, but it works after removing line4-5:
+    There is nothing was outputted by line8: ```print(i)```, but it works after removing line4-5:
 
     {{< highlight Python "hl_lines=8" >}}
 a = [1, 2, 3]
@@ -65,7 +65,7 @@ for i in d:
 
     > zip() in conjunction with the <strong>* operator can be used to unzip a list</strong>
 
-    But I'm still wonder why first try failed, submitted a question on Stackoverflow: [Why “for” affects another zip object?](https://stackoverflow.com/questions/54592039/why-for-affects-another-zip-object) after my debugging, and got the answer shortly: [zip variable empty after first use](https://stackoverflow.com/questions/17777219/zip-variable-empty-after-first-use?answertab=active#tab-top):
+    But I'm still wondering why the first try failed, submitted a question on Stackoverflow: [Why “for” affects another zip object?](https://stackoverflow.com/questions/54592039/why-for-affects-another-zip-object) after my debugging, and got the answer shortly: [zip variable empty after first use](https://stackoverflow.com/questions/17777219/zip-variable-empty-after-first-use?answertab=active#tab-top):
 
     > In [Python2.x](https://docs.python.org/2/library/functions.html#zip), zip returned a list of tuples
 

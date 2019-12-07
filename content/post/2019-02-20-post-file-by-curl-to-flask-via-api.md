@@ -21,8 +21,8 @@ reward: true
 URL: "/2019/02/20/post-file-by-curl-to-flask-via-api/"
 ---
 [Curl](https://curl.haxx.se/docs/manpage.html) is widely used in command lines or scripts to transfer data.<br>
-Different ways to use curl to post a file to a web server with samples (from both client side and server: [Python-Flask](http://flask.pocoo.org/) side) will be discussed because it took me a while on server side to receiving the data from client.<br>
-I would like to adding samples of [Python-requests](http://docs.python-requests.org/en/master/), [Postman](https://www.getpostman.com/) later.
+Different ways to use curl to post a file to a web server with samples (from both client-side and server: [Python-Flask](http://flask.pocoo.org/) side) will be discussed because it took me a while on the server-side to receiving the data from client.<br>
+I would like to add samples of [Python-requests](http://docs.python-requests.org/en/master/), [Postman](https://www.getpostman.com/) later.
 
 - ##### Started with
 
@@ -71,7 +71,7 @@ Use a production WSGI server instead.
 curl --data-binary @test.png http://127.0.0.1:5000/test{{< /highlight >}}
 
     Searched on StackOverflow, here is a [post]((https://stackoverflow.com/a/16664376/2701959)) about [All attributes](http://flask.pocoo.org/docs/1.0/api/#flask.Request) on the request was summarized by the author of Flask. <br>
-    I tried to check the attributions with following code, but I found <code>request.stream</code>, <code>request.data</code> and <code>request.files</code> affect each other (the content of <code>stream</code> become empty) when I adjusting the order of <code>print</code> syntaxes.
+    I tried to check the attributions with the following code, but I found ```request.stream```, ```request.data``` and ```request.files``` affect each other (the content of ```stream``` become empty) when I adjusting the order of ```print``` syntaxes.
     {{< highlight Python "hl_lines=3-6" >}}
     def post(self, filename):
         print("---stream---\r\n", request.stream.read()) # without read(), it returns <werkzeug.wsgi.LimitedStream object at > all the time
@@ -94,7 +94,7 @@ ImmutableMultiDict([])
 ---form---
 ImmutableMultiDict([('\x00\x00\x01....<omitted>...', '')]){{< /highlight >}}
 
-    Output after <code>print</code> syntaxes were adjusted:
+    Output after ```print``` syntaxes were adjusted:
     {{< highlight bash "hl_lines=2 4 6 8 10" >}}
 ---data---
  b''
@@ -107,11 +107,11 @@ ImmutableMultiDict([('\x00\x00\x01....<omitted>...', '')])
 ---stream---
  b''{{< /highlight >}}
 
-    <i>Note: The attribute: <code>request.stream</code> was mentioned in [another answer](https://stackoverflow.com/a/38311116/2701959).</i>
+    _Note: The attribute: ```request.stream``` was mentioned in [another answer](https://stackoverflow.com/a/38311116/2701959)._
 
-- ### <code>request.form</code>
+- ### ```request.form```
 
-    Before further steps, I realized [<code>request.form</code>](http://flask.pocoo.org/docs/1.0/api/#flask.Request.form) receive the data. Checked the <code>request.headers</code> about the content-type:
+    Before further steps, I realized [```request.form```](http://flask.pocoo.org/docs/1.0/api/#flask.Request.form) receive the data. Checked the ```request.headers``` about the content-type:
     {{< highlight Python "hl_lines=1" >}}
     def post(self, filename):
         print("---headers---\r\n",request.headers){{< /highlight >}}
@@ -125,13 +125,13 @@ Content-Length: 1150
 Content-Type: application/x-www-form-urlencoded
 Expect: 100-continue{{< /highlight >}}
 
-    The content type is <code>application/x-www-form-urlencoded</code> which was mentioned in [Curl document](https://ec.haxx.se/http-post.html) as well:
+    The content type is ```application/x-www-form-urlencoded``` which was mentioned in [Curl document](https://ec.haxx.se/http-post.html) as well:
 
-    > POSTing with curl's -d option will make it include a default header that looks like Content-Type: <code>application/x-www-form-urlencoded</code>
+    > POSTing with curl's -d option will make it include a default header that looks like Content-Type: ```application/x-www-form-urlencoded```
 
-    Checked <code>request.form</code>: <code>ImmutableMultiDict</code> with <code>request.form.[to_dict()](https://tedboy.github.io/flask/generated/generated/werkzeug.ImmutableMultiDict.html)</code>, the key of it is the content of file, the value of it is empty.
+    Checked ```request.form```: ```ImmutableMultiDict``` with ```request.form.[to_dict()](https://tedboy.github.io/flask/generated/generated/werkzeug.ImmutableMultiDict.html)```, the key of it is the content of file, the value of it is empty.
 
-    By comparing with coverting the <code>ImmutableMultiDict</code> to list and retrieve the data via index, the option: <strong><code>data-urlencode</code></strong> would be a better choice
+    By comparing with coverting the ```ImmutableMultiDict``` to list and retrieve the data via index, the option: <strong>```data-urlencode```</strong> would be a better choice
     {{< highlight bash >}}
 curl --data-urlencode image@test.png http://127.0.0.1:5000/test{{< /highlight >}}
 
@@ -140,7 +140,7 @@ ImmutableMultiDict([('image', '\x00 ...<omitted>...\x00')]){{< /highlight >}}
 
 - ### Checked the POST data again
 
-    Went through Flask official document, and found [<code>get_data()</code>](http://flask.pocoo.org/docs/1.0/api/#flask.Request.get_data) is available for incoming data.
+    Went through Flask official document, and found [```get_data()```](http://flask.pocoo.org/docs/1.0/api/#flask.Request.get_data) is available for incoming data.
 
     Updated the code to:
     {{< highlight Python >}}
@@ -148,7 +148,7 @@ ImmutableMultiDict([('image', '\x00 ...<omitted>...\x00')]){{< /highlight >}}
         print("---headers---\r\n", request.headers)
         print("---get_data---\r\n", request.get_data()){{< /highlight >}}
 
-    Checked this with content type: <code>Content-Type: application/json</code>:
+    Checked this with content type: ```Content-Type: application/json```:
     {{< highlight bash >}}
 curl --data @test.png -H 'Content-Type: application/json' http://127.0.0.1:5000/test{{< /highlight >}}
 
@@ -157,16 +157,16 @@ curl --data @test.png -H 'Content-Type: application/json' http://127.0.0.1:5000/
 ---get_data---
  b'\x00\x00 ....<omitted>... \x00'{{< /highlight >}}
 
-    Following content types were tested as well:
+    the Following content types were tested as well:
 
-    - <code>Content-Type: image/png</code>
-    - <code>Content-Type: application/octet-stream</code>
-    - <code>Content-Type: multipart/form-data</code>
-    - <code>Content-Type: text/csv</code> (with a csv file)
+    - ```Content-Type: image/png```
+    - ```Content-Type: application/octet-stream```
+    - ```Content-Type: multipart/form-data```
+    - ```Content-Type: text/csv``` (with a csv file)
 
-    <i>Note: In my testing, <code>request.stream</code> woks as <code>get_data()</code>,differnt to the [official document](http://flask.pocoo.org/docs/1.0/api/#flask.Request.stream):</i>
+    _Note: In my testing, ```request.stream``` woks as ```get_data()```,differnt to the [official document](http://flask.pocoo.org/docs/1.0/api/#flask.Request.stream):_
 
-    >If the incoming form data was not encoded with a known mimetype the data is stored unmodified in this stream for consumption. **Most of the time it is a better idea to use <code>data</code> which will give you that data as a string**. The stream only returns the data once.
+    >If the incoming form data was not encoded with a known mimetype the data is stored unmodified in this stream for consumption. **Most of the time it is a better idea to use ```data``` which will give you that data as a string**. The stream only returns the data once.
 
 - ### Option: -F
 
@@ -187,7 +187,7 @@ Content-Type: multipart/form-data; boundary=------------------------80bc4d7df251
 ---get_data---
  b'--------------------------80bc4d7df251bbac\r\nContent-Disposition: form-data; name="media"; filename="test.png"\r\nContent-Type: application/octet-stream\r\n\r\n\x00\x00\x01\x00....<omitted>... \x00\r\n--------------------------80bc4d7df251bbac--\r\n'{{< /highlight >}}
 
-    [<strong><code>files</code></strong>](http://flask.pocoo.org/docs/1.0/api/#flask.Request.files) should be the option instead of dealing with the <code>boundary</code> with the <code>get_data()</code>:
+    [<strong>```files```</strong>](http://flask.pocoo.org/docs/1.0/api/#flask.Request.files) should be the option instead of dealing with the ```boundary``` with the ```get_data()```:
 
     {{< highlight Python >}}
     def post(self, filename):
@@ -207,7 +207,7 @@ Content-Type: multipart/form-data; boundary=------------------------c446447e71e9
  ImmutableMultiDict([('media', <FileStorage: 'test.png' ('application/octet-stream')>)]){{< /highlight >}}
 
 - ### Request Parsing
-    [flask-restful](https://flask-restful.readthedocs.io/en/latest/) provides a module: [Request Parsing](https://flask-restful.readthedocs.io/en/latest/reqparse.html#basic-arguments) to provide simple and uniform access to the variable on <code>flask.request</code> object.
+    [flask-restful](https://flask-restful.readthedocs.io/en/latest/) provides a module: [Request Parsing](https://flask-restful.readthedocs.io/en/latest/reqparse.html#basic-arguments) to provide simple and uniform access to the variable on ```flask.request``` object.
 
     - command:
         {{< highlight bash >}}

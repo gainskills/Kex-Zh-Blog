@@ -30,7 +30,7 @@ but failed to run the script with errors:
 
 2. botocore.errorfactory.BucketAlreadyExists: An error occurred (BucketAlreadyExists) when calling the CreateBucket operation: The requested bucket name is not available. The bucket namespace is shared by all users of the system. Please select a different name and try again.
 
-It’s weird because the bucket can be created by following code:
+It’s weird because the bucket can be created by the following code:
 
 ~~~Python
 !/usr/bin/python3

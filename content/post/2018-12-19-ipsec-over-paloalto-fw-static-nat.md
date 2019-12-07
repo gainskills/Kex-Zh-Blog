@@ -9,7 +9,7 @@ tags:
     - Security
     - Tip
     - NAT
-published: true 
+published: true
 image:      ""
 postWithImg: true
 categories:
@@ -66,7 +66,7 @@ Policy: Permit ping traffic from both LAN and Internet to Palo Alto interfaces f
 
 ##### 5. Configure interface: ethernet1/2
 
-Almost same steps to ethernet1/1 but with different IP and Zone – IP: 10.0.17.1/24, Zone: Internet.
+Almost the same steps to ethernet1/1 but with different IP and Zone – IP: 10.0.17.1/24, Zone: Internet.
 
 ##### 6. Configured IPs, routing protocol on R5, R6, R7, R8 then run connectivity testing.
 
@@ -77,13 +77,13 @@ Almost same steps to ethernet1/1 but with different IP and Zone – IP: 10.0.17.
 
 ##### 7. Configure routing on Palo Alto
 
-Default route with next hop: 10.0.17.7
+Default route with the next hop: 10.0.17.7
 
-Static route to 10.0.56.0/24 with next hop 10.0.15.5
+A static route to 10.0.56.0/24 with the next hop 10.0.15.5
 
 {{< imgproc imgPath="2018/12/22-opt.png" alt="Route" max-height="360" >}}
 
-##### 8. Configure PAT for Requirement #4: traffic from LAN to Internet
+##### 8. Configure PAT for Requirement #4: traffic from LAN to the Internet
 
 {{< imgproc imgPath="2018/12/23-opt.png" alt="PAT-1" max-height="360" >}}
 
@@ -103,7 +103,7 @@ Creating Service and Security Group before the Security policy for IPSec traffic
 
 {{< imgproc imgPath="2018/12/36-opt.png" alt="NAT-1" max-height="330" >}}
 
-Note: The destination Address is the IP of Peer IP, the IP is:10.0.78.8 /32 in my case.
+Note: The destination address is the IP of Peer IP, the IP is:10.0.78.8 /32 in my case.
 
 {{< imgproc imgPath="2018/12/25-opt.png" alt="NAT-2" max-height="330" >}}
 
@@ -181,6 +181,6 @@ IPv6 Crypto ISAKMP SA
         {{< imgproc imgPath="2018/12/45-opt.png" alt="NAT for ICMP from Internet" max-height="330" >}}
 
         Update both source IP of NAT entry and [Security policy for IPSec](#12-security-policy-for-ipsec) to permit the traffic in.<br>
-        Note: For the Security policy: <code>Service</code> field should be <code>any</code>, <code>icmp</code> must be defined in <code>Application</code> field.
+        Note: For the Security policy: ```Service``` field should be ```any```, ```icmp``` must be defined in ```Application``` field.
 
         Reference: [Dynamic IP and Port NAT for ICMP traffic](https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClJuCAK)

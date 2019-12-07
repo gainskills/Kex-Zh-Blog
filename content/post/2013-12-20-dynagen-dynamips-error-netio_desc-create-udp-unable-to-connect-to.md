@@ -25,7 +25,7 @@ There is an error when loading a .net file named as test.net with 100 devices in
 netio_desc_create_udp: unable to connect to
 ~~~
 
-I searched on the Internet about this error msg, most of posts shared a method: specified udp port of dynamips instance in .net file. But it doesn’t works for me.
+I searched on the Internet about this error msg, most of posts shared a method: specified UDP port of dynamips instance in .net file. But it doesn’t work for me.
 
 As I found a Dynagen description in [GNS3 website](http://www.gns3.net/dynagen/):
 however Dynagen is still updated and developed for GNS3, this means you can download [GNS3 sources](http://www.gns3.net/download/), find Dynagen in it.

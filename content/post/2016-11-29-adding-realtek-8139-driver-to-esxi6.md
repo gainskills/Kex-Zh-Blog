@@ -28,17 +28,17 @@ My Dell PC has two NICs:
 
 and #2 Realtek 8139 is not supported by VMware EXSi.
 
-There are some guides about customize EXSi installation ISO to support the NIC, but I’m trying to find a way to apply the driver without reinstall EXSi.
+There are some guides about customizing EXSi installation ISO to support the NIC, but I’m trying to find a way to apply the driver without reinstall EXSi.
 
 Here is a page which contains many NIC drivers:
 [https://vibsdepot.v-front.de/wiki/index.php/List_of_currently_available_ESXi_packages](https://vibsdepot.v-front.de/wiki/index.php/List_of_currently_available_ESXi_packages)
 
-+ Download the offline bunlde driver for Realteck 8139 and follow the instruction
++ Download the offline bundle driver for Realteck 8139 and follow the instruction
 
     [http://www.vladan.fr/patch-esxi-5-5-to-esxi-6-0/](http://www.vladan.fr/patch-esxi-5-5-to-esxi-6-0/)
 
 + upload offline bundle to EXSi host
-+ change EXSi host to maintance mode
++ change EXSi host to maintenance mode
 + SSH to EXSi
 
     Apply the driver by command:
@@ -56,7 +56,7 @@ Here is a page which contains many NIC drivers:
 
 + Change the Host Acceptance Level
 
-    Follow the instruction to update host acceptance level:
+    Follow the instruction to update the host acceptance level:
 
     [https://pubs.vmware.com/vsphere-51/index.jsp?topic=%2Fcom.vmware.vsphere.install.doc%2FGUID-6A3AD878-5DE9-4C38-AC86-78CAEED0F710.html](https://pubs.vmware.com/vsphere-51/index.jsp?topic=%2Fcom.vmware.vsphere.install.doc%2FGUID-6A3AD878-5DE9-4C38-AC86-78CAEED0F710.html)
 

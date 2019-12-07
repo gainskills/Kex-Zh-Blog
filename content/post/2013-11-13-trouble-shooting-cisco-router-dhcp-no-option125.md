@@ -3,16 +3,16 @@ title:      "Trouble shooting: Cisco router DHCP No option 125"
 subtitle:   ""
 description: "DHCP Option 125"
 date:       2013-11-13
-tags: 
+tags:
     - Cisco
     - DHCP
     - IOS
     - IPPhone
     - Troubleshooting
-published: true 
+published: true
 image:      ""
 postWithImg: true
-categories: 
+categories:
     - Network
 URL: "/2013/11/13/trouble-shooting-cisco-router-dhcp-no-option125/"
 #wechat pay & alipay & Paypal
@@ -37,7 +37,7 @@ Configure DHCP on Cisco router 2811 to assign a static IP to the italkBB: Cisco 
     debug ip dhcp server packet
     terminal monitor
     ~~~
-    
+
     Debug info :
 
     ~~~log
@@ -102,4 +102,4 @@ Jul 24 05:36:21.147: DHCPD: DHCPDISCOVER received from client 001e.e5dc.ae.c0 on
 Jul 24 05:36:30.707: DHCPD: client’s VPN is .
 Jul 24 05:36:30.707: DHCPD: No option 125
 ~~~
-> Solution: After some debugging, came to know that the problem is with the subnet configured on the Gigabit ethernet. For DHCP Server to offer the ip address at least one interface should be in the same network as the pool is defined. Once the subnet is properly configured, the Server started replying.
+> Solution: After some debugging, came to know that the problem is with the subnet configured on the Gigabit ethernet. For DHCP Server to offer the IP address at least one interface should be in the same network as the pool is defined. Once the subnet is properly configured, the Server started replying.

@@ -3,7 +3,7 @@ title:      "Configuring SSH public key authentication on Cisco IOS Device"
 subtitle:   ""
 description: "A guide about public key generation, and Cisco IOS device configuration"
 date:       2013-11-08
-tags: 
+tags:
     - Public Key
     - Tip
     - SSH
@@ -12,7 +12,7 @@ tags:
     - IOS
     - Putty
     - SecureCRT
-published: true 
+published: true
 image:      ""
 postWithImg: true
 categories:
@@ -60,7 +60,7 @@ The Key pairs:
     key comment: 提示输入密码时的提示
 
     _Note：默认生成的是PuTTY’s native format (*.PPK), 通过Conversions菜单保存为ssh.com或openssh格式的private key_
-    
+
 #### Configure Cisco IOS Device
 1. Enable SSH
 
@@ -90,7 +90,7 @@ The Key pairs:
     {{< /highlight >}}
 
 **Notes About line12**<br>
-- Key不能被误时会有提示: <code>%SSH: Failed to decode the Key Value’ </code>.<br>
+- Key不能被误时会有提示: ```%SSH: Failed to decode the Key Value’ ```.<br>
 - CRT：直接将整个文本内容复制过来即可，PuTTY:只copy文本的一部分
 
 {{< imgproc imgPath="2013/11/25-opt.png" alt="Putty-PublicKey-text" max-height="140" >}}
@@ -121,7 +121,7 @@ The Key pairs:
     5. 点击 … 指定私钥文件,CRT支持openssh格式，不支持ssh.com格式
     6. 点击连接
 
-3. Putty 
+3. Putty
 
     Session页面指定device IP:
     {{< imgproc imgPath="2013/11/27-opt.png" alt="Putty-Setting1" max-height="150" >}}
@@ -130,7 +130,7 @@ The Key pairs:
     Note: PuTTY只支持ppk格式，不支持openssh和ssh.com格式
 
 #### Others
-- IOS 15.0，使用putty登录时出现Error<code>Server refused our key</code>，在设备执行 <code>Debug ip ssh detail</code>, 有error: <code>invalid old access type configured – 0x01 </code>
+- IOS 15.0，使用putty登录时出现Error```Server refused our key```，在设备执行 ```Debug ip ssh detail```, 有error: ```invalid old access type configured – 0x01 ```
 
     Resolution:
     ~~~bash

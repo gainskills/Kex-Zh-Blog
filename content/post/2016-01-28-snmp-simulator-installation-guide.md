@@ -21,13 +21,13 @@ reward: true
 ---
 **About SNMP Simulator**
 
-The SNMP Simulator software is intended for testing SNMP Managers against a large number of SNMP Agents that represent a potentially very large network populated with different kinds of SNMP-capable devices.
+The the SNMP Simulator software is intended for testing SNMP Managers against a large number of SNMP Agents that represent a potentially very large network populated with different kinds of SNMP-capable devices.
 
 Refers to its [project page](https://github.com/etingof/snmpsim) for more info.
 
 Why?
 
-With SNMP simulator you can simulate a device by the output of SNMPwalk without consider MIB files.
+With SNMP simulator you can simulate a device by the output of SNMPwalk without considering MIB files.
 
 This article is about how to install SNMP Simulator.
 
@@ -49,7 +49,7 @@ This article is about how to install SNMP Simulator.
     - pysmi
     - ply
 
-    It always fail when installing PyCrypto by pip with error:
+    It always fails when installing PyCrypto by pip with error:
 
     ~~~python
     running build_ext
@@ -122,7 +122,7 @@ This article is about how to install SNMP Simulator.
 
 - Pycrypto installation issue
 
-    On Linux , you may met an issue:
+    On Linux, you may meet an issue:
 
     ~~~bash
     warning: GMP or MPIR library not found; Not building Crypto.PublicKey._fastmath.
@@ -138,6 +138,6 @@ This article is about how to install SNMP Simulator.
     sudo apt-get install python-dev
     ~~~
 
-- Newer version is strong recommended
+- Newer version is strongly recommended
 
     Checked the [changelog](http://snmplabs.com/snmpsim/changelog.html) from its official website.

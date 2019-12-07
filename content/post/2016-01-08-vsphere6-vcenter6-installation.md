@@ -27,7 +27,7 @@ URL: "/2016/01/08/vsphere6-vcenter6-installation/"
 
     Vmware doesn't provide vcenter appliance in ova/ovf format anymore, follow the [instruction](http://www.vladan.fr/vmware-vcenter-6-0-u1-vcsa-how-to-install-configure/) to deploy it.
 
-3. Inventory is empty in VCenter webpage
+3. Inventory is empty in the VCenter webpage
 
     The most important thing: Don't login vcenter by the account 'root', instead of it using SSO account. the account in the format: 'administrator@domain-name'
 

@@ -8,7 +8,7 @@ tags:
     - Simulator
     - Security
     - IPSec
-published: true 
+published: true
 image:      ""
 postWithImg: true
 categories:
@@ -17,7 +17,7 @@ categories:
 reward: true
 URL: "/2018/01/25/run-paloalto-vm-on-eve-unl-virtualbox-osx/"
 ---
-I tried to run Palo Alto on EVE/Virtualbox/Apple MAC OS and found it fails to start the Palo Alto Firewall. So I decided to find the root cause. (EVE suggests the users to use VMware, I used VirtualBox instead because I don’t have a VMware Fusion license) 
+I tried to run Palo Alto on EVE/Virtualbox/Apple MAC OS and found it fails to start the Palo Alto Firewall. So I decided to find the root cause. (EVE suggests the users use VMware, I used VirtualBox instead because I don’t have a VMware Fusion license)
 
 1. I went through EVE logs 1st.
 
@@ -57,5 +57,5 @@ I tried to run Palo Alto on EVE/Virtualbox/Apple MAC OS and found it fails to st
 
 2018-01-05 update:
 
-- Removing 'kvm' option means worse performance.
+- Removing the 'kvm' option means worse performance.
 - VMware has a free product: [VMware Workstation Player](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html) for Linux and windows.

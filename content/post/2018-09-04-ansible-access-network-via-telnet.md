@@ -20,9 +20,9 @@ categories:
 reward: true
 URL: "/2018/09/04/ansible-access-network-via-telnet/"
 ---
-I’m learning [Ansible](https://www.ansible.com/) by reading the official document and some books like [Ansible入门](Ansible入门). Most of the instructions show you how to deploy or maintenance the services on Linux, or file operations. But what I do is trying to explore its capability on network device management automation.
+I’m learning [Ansible](https://www.ansible.com/) by reading the official document and some books like [Ansible入门](Ansible入门). Most of the instructions show you how to deploy or maintain the services on Linux, or file operations. But what I do is trying to explore its capability on network device management automation.
 
-The most import thing to practice routers/switches/routing protocol is accessing the device and configure it via CLI when I started to learn network, so I start my ansible tour from accessing the network device from CLI too.
+The most important thing to practice routers/switches/routing protocol is accessing the device and configure it via CLI when I started to learn network, so I start my ansible tour by accessing the network device from CLI too.
 
 I build a simple lab on EVE for testing: a Cios IOS switch for telnet access, a Cisco IOS router for SSH access.
 
@@ -58,7 +58,7 @@ hosts:
     ansible_host: "192.168.1.100"
 ~~~
 
-Note: I use YAML format though ini format should also work because [Misleading documentation, it shows that you can store vaulted passwords in INI files but it does not work #43897](https://github.com/ansible/ansible/issues/43897)
+Note: I use YAML format (ini format should also work) because [Misleading documentation, it shows that you can store vaulted passwords in INI files but it does not work #43897](https://github.com/ansible/ansible/issues/43897)
 
 ##### 3. new playbook: pb_telnet.yml
 
@@ -164,7 +164,7 @@ But I find it will only retrieve the password form playbook and won’t try the 
 
 {{< imgproc imgPath="2018/09/21-opt.png" alt="Telnet.py" max-height="400" >}}
 
-so, refer to other modules, I made some change: [ansible-telnet](https://github.com/hanbaobao2005/ansible-telnet/blob/master/telnet.py) so that that [telnet.py](https://github.com/hanbaobao2005/ansible-telnet/blob/master/telnet.py) can retrieve the info from inventory file. update the inventory with the telnet.py:
+so, refer to other modules, I made some change: [ansible-telnet](https://github.com/hanbaobao2005/ansible-telnet/blob/master/telnet.py) so that that [telnet.py](https://github.com/hanbaobao2005/ansible-telnet/blob/master/telnet.py) can retrieve the info from the inventory file. update the inventory with the telnet.py:
 
 ~~~yaml
 ---
@@ -275,7 +275,7 @@ returnself._expect_with_select(list, timeout)
 list[i] = re.compile(list[i])
 ~~~
 
-prompts of playbook actually work as the regular expression match, this is why “|” in [ansible official sample](https://docs.ansible.com/ansible/latest/modules/telnet_module.html) because ‘|’ works for either ‘>’ or ‘ #’. Since [] in Python RE works as single character match, remove “|” from playbook can work:
+prompts of playbook actually work as the regular expression match, this is why “|” in [ansible official sample](https://docs.ansible.com/ansible/latest/modules/telnet_module.html) because ‘|’ works for either ‘>’ or ‘ #’. Since [] in Python RE works as a single character match, remove “|” from playbook can work:
 
 ~~~yaml
 ---

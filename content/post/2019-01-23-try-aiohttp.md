@@ -20,14 +20,14 @@ reward: true
 ---
 [aiohttp](https://github.com/aio-libs/aiohttp) is an Asynchronous HTTP client/server framework for asyncio and Python
 
-I tried it because the features:
+I tried it because of the features:
 
 - [Tuning the DNS cache](https://aiohttp.readthedocs.io/en/stable/client_advanced.html#tuning-the-dns-cache)
 - [Resolving using custom nameservers](https://aiohttp.readthedocs.io/en/stable/client_advanced.html#resolving-using-custom-nameservers)
 
 With this, verifying the CDN's POPs with different ISPs' DNS on single a point should be possible.
 
-Since the code on the officical document is simple:
+Since the code on the official document is simple:
 
 >~~~python
 from aiohttp.resolver import AsyncResolver
