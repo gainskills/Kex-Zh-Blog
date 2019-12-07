@@ -9,7 +9,7 @@ tags:
     - Security
     - Tip
     - NAT
-published: true 
+published: true
 image:      ""
 postWithImg: true
 categories:
@@ -181,6 +181,6 @@ IPv6 Crypto ISAKMP SA
         {{< imgproc imgPath="2018/12/45-opt.png" alt="NAT for ICMP from Internet" max-height="330" >}}
 
         Update both source IP of NAT entry and [Security policy for IPSec](#12-security-policy-for-ipsec) to permit the traffic in.<br>
-        Note: For the Security policy: <code>Service</code> field should be <code>any</code>, <code>icmp</code> must be defined in <code>Application</code> field.
+        Note: For the Security policy: ```Service``` field should be ```any```, ```icmp``` must be defined in ```Application``` field.
 
         Reference: [Dynamic IP and Port NAT for ICMP traffic](https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClJuCAK)

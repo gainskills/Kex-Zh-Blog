@@ -35,12 +35,12 @@ Disable it in config.toml:
 
 ### 2. hrefTargetBlank
 
-This default value of the option is <code>false</code> which means external links(The wording was corrected to "absolute" from 'external' on Hugo official doc).
-I prefer to change the value to <code>true</code>.
+This default value of the option is ```false``` which means external links(The wording was corrected to "absolute" from 'external' on Hugo official doc).
+I prefer to change the value to ```true```.
 
 ### 3. [baseurl and canonifyURLs](https://gohugo.io/content-management/urls/)
 
-_canonifyURLs_ option should be to <code>true</code> for [SEO purpose](https://web.dev/discoverable/tell-search-engine-canonical-url), _baseurl_ should be configured at the same time. For my case (config.toml):
+_canonifyURLs_ option should be to ```true``` for [SEO purpose](https://web.dev/discoverable/tell-search-engine-canonical-url), _baseurl_ should be configured at the same time. For my case (config.toml):
 {{< highlight toml>}}
 baseurl = "https://blog.gainskills.top"
 canonifyURLs = true{{< /highlight >}}
@@ -49,13 +49,13 @@ Then, add following content to [Hugo template](https://discourse.gohugo.io/t/how
 {{< highlight html>}}
 <link rel="canonical" href="{{ .Permalink }}">{{< /highlight >}}
 
-The site might be failed to load on local machine after the change because it failed to bind to the domain. The [resolution](https://github.com/indigotree/atlas/issues/38) is: add <code>--baseURL</code> when running Hugo locally.
+The site might be failed to load on local machine after the change because it failed to bind to the domain. The [resolution](https://github.com/indigotree/atlas/issues/38) is: add ```--baseURL``` when running Hugo locally.
 {{< highlight toml>}}
 ./hugo_osx/hugo server --baseURL http://127.0.0.1{{< /highlight >}}
 
-### 4. <code>.Pages</code> or <code>.Site.RegularPages</code>
+### 4. ```.Pages``` or ```.Site.RegularPages```
 
-Since <code>.Pages</code> contains the urls of tag/category page, I prefer to use <code>.Site.RegularPages</code> for sitemap/robots.txt.
+Since ```.Pages``` contains the urls of tag/category page, I prefer to use ```.Site.RegularPages``` for sitemap/robots.txt.
 
 ### 5. structured-data
 
@@ -78,7 +78,7 @@ With this feature, the resource will be minified for better performance
 
 2. The way to call the resource
 
-    <code>resources.Get</code> will be used instead of linking the resource directly. Here is the [sample](https://github.com/gainskills/hugo-theme-cleanwhite/blob/36842390d0f9212650868779208b0fa211be927f/layouts/partials/head.html):
+    ```resources.Get``` will be used instead of linking the resource directly. Here is the [sample](https://github.com/gainskills/hugo-theme-cleanwhite/blob/36842390d0f9212650868779208b0fa211be927f/layouts/partials/head.html):
 
     {{< highlight html>}}
 <!-- Custom CSS -->

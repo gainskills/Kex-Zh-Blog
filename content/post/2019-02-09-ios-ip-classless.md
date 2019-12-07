@@ -9,7 +9,7 @@ tags:
     - Simulator
     - Route
     - Tip
-published: true 
+published: true
 image:      ""
 postWithImg: true
 categories:
@@ -38,7 +38,7 @@ R2(config)#ip route 10.1.1.0 255.255.255.0 192.168.12.1 {{< /highlight >}}
 4. Ping
 
     {{< highlight bash >}}
-R1#ping 2.2.2.2 
+R1#ping 2.2.2.2
 Type escape sequence to abort.
 Sending 5, 100-byte ICMP Echos to 2.2.2.2, timeout is 2 seconds:
 !!!!!
@@ -92,7 +92,7 @@ L        192.168.12.1/32 is directly connected, Ethernet0/0{{< /highlight >}}
 
 ##### Conclusion
 
-With the default route: 0.0.0.0/0, The connectivity from R1 to 10.2.2.0/24 (on R2) depends on the command: <code>ip classless</code>.
+With the default route: 0.0.0.0/0, The connectivity from R1 to 10.2.2.0/24 (on R2) depends on the command: ```ip classless```.
 
 - With 'ip classless'<br>
     The packets will be forwarded by following default route.

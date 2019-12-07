@@ -3,6 +3,7 @@ defaultContentLanguage = "en"
 languageCode = "en-us"    #for RSS
 metaDataFormat = "yaml"
 enableEmoji = true
+enableGitInfo = true
 title = "Blog - uTIcARdI"   #title is required
 theme = "hugo-theme-cleanwhite"
 preserveTaxonomyNames = true
@@ -81,7 +82,7 @@ section = [ "HTML", "RSS"]
   rss            = true
   linkedin       = ""
   stackoverflow  = "https://stackoverflow.com/users/2701959/69444091"
-  email          = "hanbaobao2005@gmail.com"
+  email          = "kex_zh@outlook.com"
   github         = "https://github.com/gainskills"
   #zhihu         = "full profile url in facebook"
   #facebook      = "full profile url in facebook"
@@ -122,6 +123,17 @@ notAlternative = true
 [params.algolia]
 vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
 params = ["categories", "tags"]
+
+[markup]
+  [markup.blackFriday]
+    fractions = false
+  [markup.goldmark.renderer]
+    unsafe = true
+    xHTML = true
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = true
+    startLevel = 3
 
 [blackfriday]
   hrefTargetBlank = true

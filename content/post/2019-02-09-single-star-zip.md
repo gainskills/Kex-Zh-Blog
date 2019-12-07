@@ -45,7 +45,7 @@ for i in d:
 (2, 5)
 (3, 6){{< /highlight >}}
 
-    There is nothing was outputted by line8: <code>print(i)</code>, but it works after removing line4-5:
+    There is nothing was outputted by line8: ```print(i)```, but it works after removing line4-5:
 
     {{< highlight Python "hl_lines=8" >}}
 a = [1, 2, 3]

@@ -205,7 +205,7 @@ Update @ Mar-09-2019
 
 This part was refer to [Lazy load images with zero Javascript](https://medium.com/@filipvitas/lazy-load-images-with-zero-javascript-2c5bcb691274)
 
-1. Add the class <code>img-lazyload</code> in Hugo shortcode for lazy load
+1. Add the class ```img-lazyload``` in Hugo shortcode for lazy load
     {{< highlight html >}}
         <img data-src="{{ $pageimage.RelPermalink }}" class="img-responsive img-lazyload" alt={{ .Get "alt" }} style="height: {{$pageimage.Height}}px;"/>{{</ highlight >}}
 
@@ -236,9 +236,9 @@ This part was refer to [Lazy load images with zero Javascript](https://medium.co
 </script>
 {{end}}{{</ highlight >}}
 
-3. Link <code>lodash</code>
+3. Link ```lodash```
 
-    Add the link in [head.html](https://github.com/gainskills/hugo-theme-cleanwhite/blob/master/layouts/partials/head.html), otherwise it will run into the error: [<code>ReferenceError: _ is not defined</code>](https://stackoverflow.com/questions/13556010/referenceerror-is-not-defined)
+    Add the link in [head.html](https://github.com/gainskills/hugo-theme-cleanwhite/blob/master/layouts/partials/head.html), otherwise it will run into the error: [```ReferenceError: _ is not defined```](https://stackoverflow.com/questions/13556010/referenceerror-is-not-defined)
 
     {{< highlight html >}}
     <!-- JS/CSS for postimg -->
