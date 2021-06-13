@@ -23,17 +23,17 @@ URL: "/2016/11/30/run-ansible-on-windows/"
 ---
 Background:
 
-Here is a topology about the environment for a performance testing, let’s name the servers 1st:
+Here is a topology about the environment for performance testing, let’s name the servers 1st:
 
-- 1 windows server for License/Workspace server
-- 5 windows servers for Network Server
-- 5 windows servers for Automation server
+- 1 windows server as the License/Workspace server
+- 5 windows servers as the Network Server
+- 5 windows servers as the Automation server
 
 {{< imgproc imgPath="2016/11/5-opt.png" alt="Topo" max-height="300" >}}
 
-It really took us a lot of time to deploy the product and collect logs on all of these servers.
+It took us a lot of time to deploy the product and collect logs on all of these servers.
 
-My colleague wrote a client-server application and do some of the tasks automatically. The application indeed works for log collection, but for product deployment, as the server end running as a service and fails to launch InstallShield  wizard, it doesn’t support the product installation.
+My colleague wrote a client-server application and do some of the tasks automatically. The application indeed works for log collection, but for product deployment, as the server end running as a service and fails to launch the InstallShield wizard, it doesn’t support the product installation.
 
 At the same time, I read an article about [Deployment Management Tools comparison between Puppet, Chef, Ansible](http://mp.weixin.qq.com/s/SeGxM87rCiq5jF9ixjGbtw), and decided to try Ansible.
 
@@ -46,7 +46,7 @@ Note:
 
 [Ansible’s document](http://docs.ansible.com/ansible/index.html) is very easy to read/understand.
 
-Install Ansible with command (Python is required):
+Install Ansible with the command (Python is required):
 
 ~~~bash
 pip install ansible
@@ -92,7 +92,7 @@ This will allow running unsigned scripts that you write on your local computer a
 
 ##### Ansible Inventory
 
-On the linux server, create my hosts file by the command:
+On the Linux server, create the hosts file by the command:
 
 ~~~bash
 vi /etc/ansible/hosts
@@ -155,7 +155,7 @@ register: ipconfig
 - debug: var=ipconfig
 ~~~
 
-Without **"PSExec.exe"** in the raw command, ansible has the same behavior as my colleague’s application: InstallShield wizard windows does not pop up when I called it by ‘raw: CMD /C’ even it needs a process to run the command.
+Without **"PSExec.exe"** in the raw command, ansible has the same behavior as my colleague’s application: the InstallShield wizard window do not pop up when I called it by ‘raw: CMD /C’ even it needs a process to run the command.
 
 Refer to the articles:
 
@@ -163,7 +163,7 @@ Refer to the articles:
 - [PsExec](https://technet.microsoft.com/en-us/sysinternals/bb897553.aspx) 2.11 // detail about PsExec parameters
 - [Query Session](https://technet.microsoft.com/en-us/library/cc785434(v=ws.11).aspx)
 
-    command to figure out the id of a Remote Desktop session which referenced by PsExec parameter: -i
+    the command to figure out the id of a Remote Desktop session which referenced by PsExec parameter: -i
 
 PsExec should be the solution for both ansible and my colleague’s application which execute a command by a background service to call a GUI application.
 

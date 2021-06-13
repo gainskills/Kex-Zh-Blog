@@ -22,7 +22,7 @@ reward: true
 ---
 #### Background
 
-An integration project: exporting a csv file from system A, convert the csv file to xls file and import the converted file into system B (A 3rd party system).
+An integration project: exporting a csv file from system A, convert the csv file to xls file, and import the converted file into system B (A 3rd party system).
 
 Environment:
 
@@ -52,9 +52,9 @@ Depends on the clue: the file can be supported after it was opened in MS Excel, 
 
     1. Send the xls file to my email
 
-    2. MS flow grabs the file from email, and insert a row to the xls file, then save the change
+    2. MS flow grabs the file from the email, and insert a row to the xls file, then save the change
 
-    3. MS flow sends the file back to email
+    3. MS flow sends the file back to the email
 
     I had to give it up because MS flow was unable to find the attached file from my email (I have figured the issue out later by creating a new flow. For my next project, I might try [MS UI flows](https://docs.microsoft.com/en-us/power-automate/ui-flows/overview) 1st).
 
@@ -67,7 +67,7 @@ Depends on the clue: the file can be supported after it was opened in MS Excel, 
 
     2. Converted the csv file to a xls file by Zamzar
 
-    Yes, there is "But". I found Zamzar free edition license is based on conversation, uploading/downloading files are two conversation. 100 conversations/1 month didn't meet my expectation, quit again.
+    Yes, there is "But". I found Zamzar free edition license is based on conversation, uploading/downloading files are two conversations. 100 conversations/1 month didn't meet my expectation, quit again.
 
 
 #### 3rd - Dig the root cause
@@ -108,7 +108,7 @@ Right now, I was aware that I have to sit down and dig the root cause of xlwt.
                 uowner = uowner.encode('ascii')  # probably not ascii, but play it safe until we know more
             self._rec_data = pack('%ds%ds' % (uowner_len, 0x70 - uowner_len), b'\x16\x00' + uowner, b' '*(0x70 - uowner_len)){{< /highlight >}}
 
-        Note: The binary string is '15 00' in screenshot, but it should be "16 00" when I was working on this, that's why the code and screenshot are inconsistent.
+        Note: The binary string is '15 00' in the screenshot, but it should be "16 00" when I was working on this, that's why the code and screenshot are inconsistent.
 
 4. Run my code again, __the xls can be support now!!!__ 🎉🎆😂 I felt I'm so lucky because the issue was resolved by fixing the 1st difference.
 

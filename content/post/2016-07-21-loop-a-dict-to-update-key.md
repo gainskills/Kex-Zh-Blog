@@ -51,7 +51,7 @@ Result of code1/code2 is:
 {'keyA/keyA/keyB' : '', 'keyA/keyA/keyA': ''}
 ~~~
 
-It doesn't work as expected, and I found the case only exists when **prefix is same to a key of the dict** which means code1/code2 works well when the keyPrefix is neither ‘keyA’ nor ‘beyB’.
+It doesn't work as expected, and I found the case only exists when **prefix is the same to a key of the dict** which means code1/code2 works well when the keyPrefix is neither ‘keyA’ nor ‘beyB’.
 
 My way to resolve this unexpected result:
 

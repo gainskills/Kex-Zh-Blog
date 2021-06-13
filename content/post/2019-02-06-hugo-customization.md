@@ -72,9 +72,9 @@ Update @ Mar-09-2019
 
 With this feature, the resource will be minified for better performance
 
-1. Location of static resource
+1. Location of the static resource
 
-    Moving the static resource to folder: assets. You can check the [theme repository](https://github.com/gainskills/hugo-theme-cleanwhite/tree/36842390d0f9212650868779208b0fa211be927f) as an example.
+    Moving the static resource to the folder: assets. You can check the [theme repository](https://github.com/gainskills/hugo-theme-cleanwhite/tree/36842390d0f9212650868779208b0fa211be927f) as an example.
 
 2. The way to call the resource
 

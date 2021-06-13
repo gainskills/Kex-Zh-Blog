@@ -5,7 +5,7 @@ date:       2019-01-01
 published: true
 showdisqus: false
 ---
-Kexian Zhang is a developer and network engineer. He has a solid experience in the information technology for more than 10 years.
+The owner of the blog is a developer and network engineer. He has a solid experience in the information technology for more than 10 years.
 
 Feel free to contact him by dropping an email to <a href = "mailto:kex_zh@outlook.com">kex_zh@outlook.com</a> if you have any question about the articles.
 

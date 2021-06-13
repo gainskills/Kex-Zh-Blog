@@ -36,7 +36,7 @@ with a special character 'À' which its binary value is 192:
 
 {{< imgproc imgPath="2017/06/1-opt.png" alt="Character" max-height="20" >}}
 
-My way to resolve this error is to update typecode of the array from 'b' (signed char) to 'B' (unsigned char).
+My way to resolve this error is to update the type code of the array from 'b' (signed char) to 'B' (unsigned char).
 
 ~~~python
 from array import array

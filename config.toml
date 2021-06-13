@@ -165,7 +165,7 @@ pattern = "2006"
   anchor = "smart"
 
 [sitemap]
-  ChangeFreq = "weekly"
+  ChangeFreq = "monthly"
   Priority = 0.9
 
 [privacy]

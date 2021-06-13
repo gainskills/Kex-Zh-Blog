@@ -25,7 +25,7 @@ echo Checking ping %testipa% (15 times), please don't close current window
 echo ping %testipa% (15 times)  >> test.log
 ping %testipa% -w 500 -n 15 >> test.log{{</ highlight >}}
 
-But got following error:
+But got the following error:
 {{< highlight bat >}}
 Checking ping x.x.x.x (15 times), please don't close current window
 The process cannot access the file because it is being used by another process.
@@ -39,7 +39,7 @@ Don't using built-in tools' name as user executable files' name.
 
 ### Error 2
 
-Once upon a Time, a customer reported an issue: some of devices lost after they relaunched the software.<br>
+Once upon a Time, a customer reported an issue: some of the devices lost after they relaunched the software.<br>
 And the device was found after comparing the data, and the hostname of the device is 'com1'.
 
 Searched on [Microsoft](https://docs.microsoft.com/en-us/windows/desktop/fileio/naming-a-file) and found:
@@ -48,7 +48,7 @@ Searched on [Microsoft](https://docs.microsoft.com/en-us/windows/desktop/fileio/
 
 >CON, PRN, AUX, NUL, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, and LPT9. Also avoid these names followed immediately by an extension; for example, NUL.txt is not recommended. For more information, see [Namespaces](https://docs.microsoft.com/en-us/windows/desktop/fileio/naming-a-file#win32-file-namespaces).
 
-It failed to load the device because the software try to parsing the file because it's not there.
+It failed to load the device because the software tries to parse the file, after all, it's not there.
 
 <strong>Conclusion</strong><br>
 A mechanism is required if the software save data to file by outer conditions.

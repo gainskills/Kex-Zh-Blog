@@ -16,7 +16,7 @@ categories:
 reward: true
 URL: "/2018/02/13/python-smtplib-email/"
 ---
-I followed the [instruction](http://www.runoob.com/python3/python3-smtp.html) which is written in Chinese to learn how to send emails by Python, here some tips from my own practice:
+I followed the [instruction](http://www.runoob.com/python3/python3-smtp.html) which is written in Chinese to learn how to send emails by Python, here some tips from my practice:
 
 1. Name of the attachment is shown as ‘ATT00002’
 

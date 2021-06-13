@@ -15,7 +15,7 @@ postWithImg: true
 image:      ""
 postWithImg: true
 showtoc: false
-URL: "/2019/11/15/vscode-as-idle-for-django/"
+URL: "/2019/11/15/vscode-as-idle-for-Django/"
 #wechat pay & alipay & Paypal
 reward: true
 ---
@@ -44,7 +44,7 @@ This blog is about using MS VSCode as Django IDLE (OS: Mac OX, the steps are ref
 
 Launch VSCode and install the Extension: [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
-{{< imgproc imgPath="2019/11/01-lunchvs-opt.png" alt="Launch VS from Launchpad" max-height="220" >}}
+{{< imgproc imgPath="2019/11/01-lunchvs-opt.png" alt="Launch VS" max-height="150" >}}
 
 {{< imgproc imgPath="2019/11/01-ext-opt.png" alt="Install Extension" max-height="280" >}}
 
@@ -52,9 +52,9 @@ Launch VSCode and install the Extension: [Python](https://marketplace.visualstud
 
 ##### 3. "Hello World"
 
-- Select or create a folder for Django project
+- Select or create a folder for the Django project
 
-    E.g.: using '~/Documents/django_test' as the project folder
+    E.g.: using '~/Documents/Django_test' as the project folder
     {{< imgproc imgPath="2019/11/01-open-1-opt.png" alt="Open folder-1" max-height="140" >}}
     {{< imgproc imgPath="2019/11/01-open-2-opt.png" alt="Open folder: Document" max-height="220" >}}
     {{< imgproc imgPath="2019/11/01-open-3-opt.png" alt="New Folder-1" max-height="400" >}}
@@ -62,7 +62,7 @@ Launch VSCode and install the Extension: [Python](https://marketplace.visualstud
 
 - MS Code, Python verification
 
-    New 'test.py' in the folder: 'Document/django_test'
+    New 'test.py' in the folder: 'Document/Django_test'
 
     {{< imgproc imgPath="2019/11/01-open-5-opt.png" alt="New File-1" max-height="160" >}}
     {{< imgproc imgPath="2019/11/01-open-6-opt.png" alt="New File-2" max-height="100" >}}
@@ -74,7 +74,7 @@ Launch VSCode and install the Extension: [Python](https://marketplace.visualstud
 
     {{< imgproc imgPath="2019/11/01-open-8-opt.png" alt="Interpreter" max-height="280" >}}
 
-    **Note:** The info here might be different to yours because difference OS, Python version.
+    **Note:** The info here might be different from yours because of OS, Python version differences.
 
     {{< imgproc imgPath="2019/11/01-open-9-opt.png" alt="Run Py file-1" max-height="320" >}}
 
@@ -86,7 +86,7 @@ Launch VSCode and install the Extension: [Python](https://marketplace.visualstud
 
 ##### 4. Install [virtualenv](https://virtualenv.pypa.io/en/latest/), Django
 
-- Create a folder: "venv" inside the project folder for Python virtual environment
+- Create a folder: "venv" inside the project folder for the Python virtual environment
 
     {{< imgproc imgPath="2019/11/01-ve-1-opt.png" alt="New Folder-1" max-height="180" >}}
     {{< imgproc imgPath="2019/11/01-ve-2-opt.png" alt="New Folder-2" max-height="100" >}}
@@ -94,12 +94,12 @@ Launch VSCode and install the Extension: [Python](https://marketplace.visualstud
     Find "Terminal" from menu:
     {{< imgproc imgPath="2019/11/01-ve-3-opt.png" alt="Active Terminal" max-height="180" >}}
 
-    **Note**: The hot key to active the terminal on Mac OS is ```Control + ` ```
+    **Note**: The hotkey to active the terminal on Mac OS is ```Control + ` ```
 
     In the pop terminal window, execute the commands:
     ```shell
     pip3 install virtualenv
-    cd django_test
+    cd Django_test
     virtualenv venv
     ```
 
@@ -151,14 +151,14 @@ Successfully installed pip-19.3.1{{</ highlight >}}
 
     {{< imgproc imgPath="2019/11/01-terminal-2-opt.png" alt="VS Code active VE automatically" max-height="120" >}}
 
-    Execute following command in the terminal to install Django:
+    Execute the following command in the terminal to install Django:
     ```shell
-    pip3 install django
+    pip3 install Django
     ```
 
 ##### 5. Run Django
 
-Congratulations! you can work on your django project within VSCode right now. With MS VScode task feature, regular tasks could be executed easily, let's say Django runserver command.
+With MS VScode task feature, regular tasks could be executed easily, let's say `Django runserver` command.
 
 - Configure task
 
@@ -181,7 +181,7 @@ Congratulations! you can work on your django project within VSCode right now. Wi
             {
                 "label": "Run Django",
                 "type": "shell",
-                "command": "/Users/kezh/Documents/django_test/venv/bin/python3 /Users/kezh/Documents/django_test/testprj/manage.py runserver 0.0.0.0:8000"
+                "command": "/Users/kezh/Documents/Django_test/venv/bin/python3 /Users/kezh/Documents/Django_test/testprj/manage.py runserver 0.0.0.0:8000"
             }
         ]
     }

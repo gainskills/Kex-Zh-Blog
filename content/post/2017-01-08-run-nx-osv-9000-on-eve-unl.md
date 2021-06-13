@@ -9,7 +9,7 @@ tags:
     - DataCenter
     - Nexus9K
     - Tip
-published: true 
+published: true
 image:      ""
 postWithImg: true
 categories:
@@ -24,7 +24,7 @@ Refer to [how to add NX-OXv 9000 to GNS3](https://adosztal.blogspot.com/2016/12/
 
 Here is the NX-OSv9k [image](https://software.cisco.com/download/release.html?mdfid=286312239&flowid=81422&softwareid=282088129&release=7.0(3)I5(1)&relind=AVAILABLE&rellifecycle=&reltype=latest) file from Cisco (nxosv-final.7.0.3.I5.1.qcow2). Please note that you must have a service contract with Cisco in order to download it.
 
-**No I can’t provide the image with anyone.**
+**No I can’t provide the image to anyone.**
 
 #### 2. Copy image to eve(UNL)
 
@@ -48,7 +48,7 @@ Change the Console type to ‘telnet’
 
 Note: Change the Console to 'telnet' before you start the node.
 
-This step needs your patient because the terminal will be shown as a blank screen for a while(about 15 – 20 seconds). The boot process takes about minutes, then t will prompts you:
+This step needs your patient because the terminal will be shown as a blank screen for a while(about 15 – 20 seconds). The boot process takes about minutes, then it will prompt you:
 
 ~~~bash
 Abort Auto Provisioning and continue with normal setup ?(yes/no)[n]: y
@@ -61,13 +61,13 @@ Abort Auto Provisioning and continue with normal setup ?(yes/no)[n]: y
 The advantage of eve is it already improved Qemu with UEFI for Cisco Nexus9Kv.
 More info:
 
-* [How to run OVMF (Qemu with UEFI fireware)](https://github.com/tianocore/tianocore.github.io/wiki/How-to-run-OVMF)
+* [How to run OVMF (Qemu with UEFI firmware)](https://github.com/tianocore/tianocore.github.io/wiki/How-to-run-OVMF)
 
 * Refer to the files in /opt/unetlab/html/templates for hda folder name
 * Refer to the specified file in /opt/unetlab/html/templates for hda file name
 
     E.g.: You could learn that ‘nxosv-final.7.0.3.I5.1.qcow2’ should be changed to ‘hda.qcow2’ from file : nxosv9k.php
-* Comment from Sergey for reload issue
+* Comment from Sergey for reloading issue
 
     There is a known issue about Nexus reload/shut down:[http://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/sw/7-x/nx-osv/configuration/guide/b_NX-OSv_9000/b_NX-OSv_9000_chapter_010.html](http://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/sw/7-x/nx-osv/configuration/guide/b_NX-OSv_9000/b_NX-OSv_9000_chapter_010.html)
 

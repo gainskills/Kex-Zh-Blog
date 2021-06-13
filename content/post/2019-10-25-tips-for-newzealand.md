@@ -4,6 +4,7 @@ Lang: "zh"
 subtitle:   ""
 description: "Info about Food, Places, etc. in New Zealand"
 date:       2019-10-25
+lastmod:	2020-10-04
 tags:
     - Tip
 published: true
@@ -103,7 +104,7 @@ URL: "/2019/10/25/tips-for-newzealand/"
 	* 证件照比平常的照片贵，熟悉photoshop的盆友可以创建6 * 4 inch 的画
     板，自己做好后去warehouse stationary打印快照，35 cent一张
 
-- 好吃
+- 好吃的
 
 	- 中餐
 
@@ -151,3 +152,41 @@ URL: "/2019/10/25/tips-for-newzealand/"
     （如，一份工作就够分数的话，可以不填写其它的工作）
 
 	    * [Health Report](https://www.immigration.govt.nz/new-zealand-visas/apply-for-a-visa/tools-and-information/medical-info/when-you-need-an-x-ray-or-medical-examination) - 3年内因申请其它签证提交过的，可以不要再提交
+
+- 买房
+  
+  	很多人会建议不要买老房子(针对2021年,老房子的标准是1945年之前的房子)会特别麻烦。具体的麻烦在于
+
+    - 保险
+
+		参加Auction前，通过让你的中介或者房主或者屋检人员得到一下问题的明确答案
+
+		* wire线： TPS wire
+        * 水管是否为 PVC piping
+        * 地基支撑是否更换
+        * Roof是否有更换？
+        * Scrim walls
+        * Does the home have a monitored smoke or heat detector
+
+- 活动
+
+	* 高尔夫
+
+		新西兰因为景色、气候宜人，有很多高尔夫球场，参与这项运动的门槛不算高。
+
+		- Drive
+
+			* 暂无
+
+		- 下场
+
+			* 防水的鞋子
+			* 发球时，确保视野内没有人
+
+	* 羽毛球
+  
+		羽毛球在奥克兰、惠灵顿特别受欢迎。
+
+		- Club
+
+			奥克兰有很多羽毛球Club，类似健身房，缴纳年费并在固定的时间参加活动。有些Club还会附送羽毛球场地的会员，这样自己订court时会有优惠。

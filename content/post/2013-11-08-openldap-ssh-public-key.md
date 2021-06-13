@@ -3,7 +3,7 @@ title:      "Open LDAP and SSH Public key"
 subtitle:   ""
 description: "A guide to setup public key authentication on CentOS with Open LDAP"
 date:       2013-11-08
-tags: 
+tags:
     - Linux
     - Public Key
     - LDAP
@@ -11,7 +11,7 @@ tags:
     - SSH
     - Security
     - CentOS
-published: true 
+published: true
 image:      ""
 postWithImg: true
 categories:
@@ -29,7 +29,7 @@ The article is about how I setup Open LDAP on CentOS6 for SSH public key authent
 
 #### 2. CentOS configuration
 
-- Network: IP address, DNS and restart network service
+- Network: IP address, DNS, and restart network service
 
     ~~~bash
     vi /etc/resolv.conf/DNS
@@ -58,8 +58,8 @@ The article is about how I setup Open LDAP on CentOS6 for SSH public key authent
     service iptables stop
     ~~~
 
-    _Note: This only for testing environment._
- 
+    _Note: This only for the testing environment._
+
 - Update software repository, install LDAP/ssh-lpk Clients
 
     ~~~bash
@@ -70,14 +70,14 @@ The article is about how I setup Open LDAP on CentOS6 for SSH public key authent
 
 #### 3. LDAP Configuration
 
-- Generate the ldap admin password
+- Generate the LDAP admin password
 
     ~~~bash
     slappasswd -s mysecret
     {SSHA}cFJqdWOeG4b1p3bJFGSds5QKGw8faPd7       //copy string as password by following steps
     ~~~
     Note: _mysecret_  is the manage password, you will use the password for administrative commands. Displayed after the command is the corresponding hash, use the hash in further steps.
- 
+
 - TLS settings
 
     ~~~bash
@@ -94,27 +94,27 @@ The article is about how I setup Open LDAP on CentOS6 for SSH public key authent
     EOF
     ~~~
 
-- Initialize the password for the user: “cn=admin,cn=config” 
+- Initialize the password for the user: “cn=admin,cn=config”
 
     ~~~bash
     cat <> /etc/openldap/slapd.d/cn\=config/olcDatabase\=\{0\}config.ldif
     olcRootPW: {SSHA}cFJqdWOeG4b1p3bJFGSds5QKGw8faPd7
     EOF
     ~~~
- 
+
 - Monitor configuration
 
     ~~~bash
     sed -i ‘s/cn=manager,dc=my-domain,dc=com/cn=Manager,dc=kzblog,dc=com/g’ /etc/openldap/slapd.d/cn\=config/olcDatabase\=\{1\}monitor.ldif
     ~~~
- 
+
 - DB config
 
     ~~~bash
     cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
     chown -R ldap:ldap /var/lib/ldap/
     ~~~
- 
+
 - Generate SSL keys
 
     ~~~bash
@@ -174,20 +174,20 @@ The article is about how I setup Open LDAP on CentOS6 for SSH public key authent
     ldapsearch -H “ldap://127.0.0.1.com” -x -b “dc=kzblog,dc=com”
     ~~~
 
- 
+
 - LDAP server configuration
 
     ~~~bash
     authconfig –disablenis –enablemkhomedir –enableshadow –enablelocauthorize –enableldap –ldapserver=ldap://127.0.0.1 –enablemd5 –ldapbasedn=dc=kzblog,dc=com –updateall
     ~~~
-    
+
     **Or**, you can use a curses-based application for the configuration.
     Enable necessary options based on the above command
     ~~~bash
     authconfig-tui
     ~~~
     Note: _–enablemkhomedir_ is not available in authconfig-tui
- 
+
 - Allow SSH public-key login
 
     ~~~bash
@@ -205,7 +205,7 @@ The article is about how I setup Open LDAP on CentOS6 for SSH public key authent
     EOF
     ~~~
 
-- Tell system to lookup sudoers info from ldap or files respectively
+- Tell the system to lookup sudoers info from ldap or files respectively
 
     ~~~bash
     echo ‘sudoers: ldap files’ >> /etc/nsswitch.conf
@@ -246,7 +246,7 @@ The article is about how I setup Open LDAP on CentOS6 for SSH public key authent
 
     {{< imgproc imgPath="2013/11/03-opt.png" alt="LAM Server Setting" max-height="250" >}}
 
-- Enter LAM default password: lam , and click ‘Ok’
+- Enter LAM default password: lam, and click ‘Ok’
 
     {{< imgproc imgPath="2013/11/04-opt.png" alt="LAM Password" max-height="120" >}}
 
@@ -263,7 +263,7 @@ The article is about how I setup Open LDAP on CentOS6 for SSH public key authent
 
     {{< imgproc imgPath="2013/11/07-opt.png" alt="Modules" max-height="350" >}}
 
-- Go back to login page after you click ‘Save’ button; Login by LDAP root password : _mysecret_
+- Go back to login page after you click ‘Save’ button; Login by LDAP root password: _mysecret_
 
     {{< imgproc imgPath="2013/11/08-opt.png" alt="Login again" max-height="200" >}}
 
@@ -310,7 +310,7 @@ The article is about how I setup Open LDAP on CentOS6 for SSH public key authent
     ~~~
     more /var/log/auth.log
     ~~~
- 
+
 - LDAP settings
 
     ~~~
@@ -321,8 +321,8 @@ The article is about how I setup Open LDAP on CentOS6 for SSH public key authent
     authconfig –disablenis –enablemkhomedir –enableshadow –enablelocauthorize –enableldap –ldapserver=ldap://127.0.0.1 –enablemd5 –ldapbasedn=dc=kzblog,dc=com –updateall
     service httpd start
     ~~~
-    
-    Note: Firewall setting only for testing enviroment
+
+    Note: Firewall setting only for testing environment
 
 ##### Others
 

@@ -6,7 +6,7 @@ date:       2018-09-21
 tags:
     - Tip
     - windows
-published: true 
+published: true
 image:      ""
 postWithImg: true
 categories:
@@ -16,7 +16,7 @@ categories:
 reward: true
 URL: "/2018/09/21/monitor-network-connections-based-on-process/"
 ---
-Wireshark is widely used in packets capturing with the flexible filters, but for some particular cases, end users care about the network sessions which established by a specific application.
+[Wireshark](https://www.wireshark.org/) is widely used in packets capturing with flexible filters, but for some particular cases, end users care about the network sessions which established by a specific application.
 
 I will show how to check the sessions of ‘Microsoft OneNote’.
 
@@ -64,10 +64,10 @@ lsof -c /Microsoft\ One/ -r 1 | awk '$5 ~ /^IP/ {print}
 
 - -c /Microsoft\ One/ is how lsof supports regular expression:
 
-    If c begins and ends with a slash (‘/’), the characters between the slashes are interpreted as a regular expres-sion.
+    If c begins and ends with a slash (‘/’), the characters between the slashes are interpreted as a regular expression.
 
 - -r 1 means the losf will run in repeat mode
-- awk command will filter all IP connections because -c and -i options are conflicting to each other
+- awk command will filter all IP connections because -c and -i options are conflicting with each other
 
 here is a sample:
 

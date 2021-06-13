@@ -21,8 +21,8 @@ reward: true
 URL: "/2019/02/20/post-file-by-curl-to-flask-via-api/"
 ---
 [Curl](https://curl.haxx.se/docs/manpage.html) is widely used in command lines or scripts to transfer data.<br>
-Different ways to use curl to post a file to a web server with samples (from both client side and server: [Python-Flask](http://flask.pocoo.org/) side) will be discussed because it took me a while on server side to receiving the data from client.<br>
-I would like to adding samples of [Python-requests](http://docs.python-requests.org/en/master/), [Postman](https://www.getpostman.com/) later.
+Different ways to use curl to post a file to a web server with samples (from both client-side and server: [Python-Flask](http://flask.pocoo.org/) side) will be discussed because it took me a while on the server-side to receiving the data from client.<br>
+I would like to add samples of [Python-requests](http://docs.python-requests.org/en/master/), [Postman](https://www.getpostman.com/) later.
 
 - ##### Started with
 
@@ -71,7 +71,7 @@ Use a production WSGI server instead.
 curl --data-binary @test.png http://127.0.0.1:5000/test{{< /highlight >}}
 
     Searched on StackOverflow, here is a [post]((https://stackoverflow.com/a/16664376/2701959)) about [All attributes](http://flask.pocoo.org/docs/1.0/api/#flask.Request) on the request was summarized by the author of Flask. <br>
-    I tried to check the attributions with following code, but I found ```request.stream```, ```request.data``` and ```request.files``` affect each other (the content of ```stream``` become empty) when I adjusting the order of ```print``` syntaxes.
+    I tried to check the attributions with the following code, but I found ```request.stream```, ```request.data``` and ```request.files``` affect each other (the content of ```stream``` become empty) when I adjusting the order of ```print``` syntaxes.
     {{< highlight Python "hl_lines=3-6" >}}
     def post(self, filename):
         print("---stream---\r\n", request.stream.read()) # without read(), it returns <werkzeug.wsgi.LimitedStream object at > all the time
@@ -157,7 +157,7 @@ curl --data @test.png -H 'Content-Type: application/json' http://127.0.0.1:5000/
 ---get_data---
  b'\x00\x00 ....<omitted>... \x00'{{< /highlight >}}
 
-    Following content types were tested as well:
+    the Following content types were tested as well:
 
     - ```Content-Type: image/png```
     - ```Content-Type: application/octet-stream```

@@ -26,12 +26,12 @@ At first, I followed [Deployment of Project Pages from /docs folder on master br
 
 I continue to check [Deployment of Project Pages From Your gh-pages branch](https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch) after I did some customization on [hugo-theme-cleanwhite](https://themes.gohugo.io/hugo-theme-cleanwhite/) and want to publish the change to the [forked branch](https://github.com/gainskills/hugo-theme-cleanwhite).
 
-Instead of follow Hugo guide, I did some try myself. I searched "change a subfolder to another repository and found the article: [Moving Files from one Git Repository to Another, Preserving History](http://gbayer.com/development/moving-files-from-one-git-repository-to-another-preserving-history/) but its case is:
+Instead of the follow Hugo guide, I did some try myself. I searched "change a subfolder to another repository and found the article: [Moving Files from one Git Repository to Another, Preserving History](http://gbayer.com/development/moving-files-from-one-git-repository-to-another-preserving-history/) but its case is:
 
 - Move directory 1 from Git repository A to Git repository B
 - repository A as a branch in repository B
 
-Searched and read following links:
+Searched and read the following links:
 
 - [Splitting a sub folder out into a new repository](https://help.github.com/articles/splitting-a-subfolder-out-into-a-new-repository/)
 - [Working with submodules](https://github.blog/2016-02-01-working-with-submodules/)
@@ -40,11 +40,11 @@ Searched and read following links:
 
 - [gainskills.github.io](https://github.com/gainskills/gainskills.github.io)
 
-    This repository is for Hugo published files, the prefix of the repository should be same to my name in github, read more about the repository setup: [pages.github](https://pages.github.com/),[GitHub User or Organization Pages
+    This repository is for Hugo published files, the prefix of the repository should be the same as my name in github, read more about the repository setup: [pages.github](https://pages.github.com/),[GitHub User or Organization Pages
 ](https://gohugo.io/hosting-and-deployment/hosting-on-github/#github-user-or-organization-pages)
 - [gainskills/hugo-theme-cleanwhite](https://github.com/gainskills/hugo-theme-cleanwhite)
 
-    This repository is for customized theme (It's a fork repository)
+    This repository is for the customized theme (It's a forked repository)
     <br>
     **Note:**
 
@@ -69,11 +69,11 @@ Refer to [Quick start: Setting up a custom domain](https://help.github.com/artic
 - Disable _publishDir_ option in config.toml
 - Update _baseurl_ in config.toml
     The value can be kept, but for my case, I migrated my blog from "www.gainskills.top" to "blog.gainskills.top".
-- run hugo to generate published files.
+- run Hugo to generate published files.
 - Check _public_ folder and make sure the files were generated
 - Push files
 
-    - In the root folder of the Hugo project, run following commands to push local files to [gainskills.github.io](https://github.com/gainskills/gainskills.github.io)
+    - In the root folder of the Hugo project, run the following commands to push local files to [gainskills.github.io](https://github.com/gainskills/gainskills.github.io)
 
         ~~~bash
         mkdir pubic
@@ -103,11 +103,11 @@ git push --force
 
 Do the same thing on folder _theme/hugo-theme-cleanwhite_ with the url: https://github.com/gainskills/hugo-theme-cleanwhite.git
 
-For _git rm_, the data can be removed from history by following: [Removing sensitive data from a repository](https://help.github.com/articles/removing-sensitive-data-from-a-repository/)
+For _git rm_, the data can be removed from history by the following: [Removing sensitive data from a repository](https://help.github.com/articles/removing-sensitive-data-from-a-repository/)
 
 #### Deployment script
 
-Update hugo deployment script for all repositories:
+Update Hugo deployment script for all repositories:
 {{< highlight bash >}}
 #!/bin/bash
 
@@ -116,7 +116,7 @@ rm -r -f ./public/*
 find . -name '.DS_Store' -type f -delete
 
 # Build the project, if using a theme, replace with `hugo -t <YOURTHEME>
-./hugo_0.53_osx/hugo -t hugo-theme-cleanwhite --quiet --cleanDestinationDir --minify --gc
+./hugo_0.53_osx/hugo -t Hugo-theme-cleanwhite --quiet --cleanDestinationDir --minify --gc
 
 #add CNAME back
 echo "blog.gainskills.top" >> ./public/CNAME
@@ -153,9 +153,9 @@ fi
 
 #### Clean up
 
-Since I moved my blog from 'www.gainskill.top' to 'blog.gainskills.top', I redirected the traffic to new domain by following [Redirects on GitHub Pages](https://help.github.com/articles/redirects-on-github-pages/).
+Since I moved my blog from 'www.gainskill.top' to 'blog.gainskills.top', I redirected the traffic to a new domain by the following [Redirects on GitHub Pages](https://help.github.com/articles/redirects-on-github-pages/).
 
-Removed all files in folder: docs (Keep CNAME file there), and new files: _config.yml and index.html
+Removed all files in the folder: docs (Keep CNAME file there), and new files: _config.yml and index.html
 
 - The content of _config.yml
 {{< highlight yaml >}}
@@ -165,7 +165,7 @@ plugins:
 - The content of index.html
 {{< highlight yaml >}}
 ---
-title: Kexian Zhang's Blog
+title: Blog
 redirect_from:
 - /sitemap.xml
 - /index.xml
