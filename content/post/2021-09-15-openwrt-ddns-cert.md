@@ -112,7 +112,7 @@ root@OpenWrt:~/.acme.sh# mkdir dnsapi{{</ highlight >}}
     - Certificate generation
 
         {{< highlight shell >}}
-./acme.sh --issue --dns dns_he -d ${your_domain_name}{{</ highlight >}}
+./acme.sh --register-account -m ${your_email} --server letsencrypt --issue --dns dns_he -d ${your_domain_name}{{</ highlight >}}
 
         The output will be if everything works
 

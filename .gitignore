@@ -11,3 +11,4 @@ package.json
 .env
 public/*
 themes/*
+.hugo_build.lock
