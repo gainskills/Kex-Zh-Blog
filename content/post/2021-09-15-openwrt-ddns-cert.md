@@ -9,7 +9,7 @@ tags:
     - Let's Encrypt
     - Certificate
 categories:
-    - Linux
+    - OS
     - Network
 published: true
 postWithImg: true
