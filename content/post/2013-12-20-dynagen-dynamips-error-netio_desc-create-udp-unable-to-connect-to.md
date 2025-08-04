@@ -2,13 +2,13 @@
 title:      "Dynagen/Dynamips error: netio_desc_create_udp: unable to connect to"
 subtitle:   ""
 description: "A Dynagen/Dynamips error"
-date:       "2013-12-20"
+date:       2013-12-20
 tags:
     - Troubleshooting
     - Simulator
     - GNS3
     - Dynagen
-published: true
+publishDate: 2013-12-20
 image:      ""
 categories:
     - Network

@@ -9,7 +9,7 @@ tags:
     - IOS
     - Telnet
     - Python
-published: true
+publishDate: 2018-09-04
 image:      ""
 postWithImg: true
 categories:

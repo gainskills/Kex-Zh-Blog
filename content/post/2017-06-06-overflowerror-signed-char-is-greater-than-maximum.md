@@ -6,7 +6,7 @@ date:       2017-06-06
 tags:
     - Troubleshooting
     - Python
-published: true
+publishDate: 2017-06-06
 postWithImg: true
 image:      ""
 categories:

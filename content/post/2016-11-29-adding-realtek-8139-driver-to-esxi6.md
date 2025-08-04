@@ -10,7 +10,7 @@ tags:
     - Driver
     - Installation
     - Troubleshooting
-published: true
+publishDate: 2016-11-29
 image:      ""
 postWithImg: true
 categories:

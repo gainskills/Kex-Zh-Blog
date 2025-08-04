@@ -7,7 +7,7 @@ enableGitInfo = true
 title = "Blog - uTIcARdI"   #title is required
 theme = "hugo-theme-cleanwhite"
 preserveTaxonomyNames = true
-paginate = 9    #frontpage pagination
+pagination.pagerSize = 9    #frontpage pagination
 hasCJKLanguage = true
 enableRobotsTXT = true
 canonifyURLs = true
@@ -18,8 +18,6 @@ disableAliases = true
 #publishDir = "docs"
 staticDir = "assets"
 
-# Google Analytics
-googleAnalytics = "UA-131650010-2"
 # Enable comments by entering your Disqus shortname
 DisqusShortname = "kexian-zhangs-blog"
 
@@ -63,7 +61,7 @@ section = [ "HTML", "RSS"]
   ga_site_id = ""
 
   # Google AdSense - AD
-  Google_ad_id = "ca-pub-5029900143451942"
+  Google_ad_id = "ca-pub-2131169764685829"
 
   # Baidu Analytics
   ba_track_id = ""
@@ -171,11 +169,6 @@ pattern = "2006"
 [privacy]
   [privacy.disqus]
     disable = false
-  [privacy.googleAnalytics]
-    anonymizeIP = false
-    disable = false
-    respectDoNotTrack = true
-    useSessionStorage = true
   [privacy.instagram]
     disable = false
     simple = true

@@ -3,12 +3,12 @@ layout:     post
 title:      "get() in get() method of Pyhon dict"
 subtitle:   ""
 description: "A tip about get() method of Python dict"
-date:       "2019-01-09"
+date:       2019-01-09
 tags:
     - Dictionary
     - Troubleshooting
     - Python
-published: true
+publishDate: 2019-01-09
 image:      ""
 categories:
     - Code

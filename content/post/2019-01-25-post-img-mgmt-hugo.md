@@ -3,8 +3,8 @@ layout:     post
 title:      "Hugo-Images management"
 subtitle:   ""
 description: "Hugo tutorials"
-date:       "2019-01-25"
-lastmod:    "2019-03-09"
+date:       2019-01-25
+lastmod:    2019-03-09
 tags:
     - Hugo
     - Blog
@@ -15,7 +15,7 @@ tags:
     - Web
 categories:
     - Code
-published: true
+publishDate: 2019-01-25
 image:      ""
 postWithImg: true
 categories:

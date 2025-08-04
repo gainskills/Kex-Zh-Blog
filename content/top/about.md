@@ -2,7 +2,7 @@
 layout:     post
 title:      "About me"
 date:       2019-01-01
-published: true
+publishDate: 2019-01-01
 showdisqus: false
 ---
 The owner of the blog is a developer and network engineer. He has a solid experience in the information technology for more than 10 years.

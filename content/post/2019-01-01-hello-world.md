@@ -7,7 +7,7 @@ tags:
     - Hugo
     - Blog
     - Web
-published: true
+publishDate: 2019-01-01
 image:      ""
 # categories:
 URL: "/2019/01/01/hello-world/"

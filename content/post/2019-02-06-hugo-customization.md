@@ -3,8 +3,8 @@ layout:     post
 title:      "Hugo-Customization"
 subtitle:   ""
 description: "Hugo tutorials"
-date:       "2019-02-06"
-lastmod:    "2019-03-09"
+date:       2019-02-06
+lastmod:    2019-03-09
 tags:
     - Hugo
     - Blog
@@ -12,7 +12,7 @@ tags:
     - SEO
     - Html
     - Web
-published: true
+publishDate: 2019-02-06
 image:      ""
 postWithImg: true
 categories:

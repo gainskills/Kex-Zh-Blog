@@ -3,14 +3,14 @@ layout:     post
 title:      "aiohttp/aiodns-Resolving using custom nameservers"
 subtitle:   ""
 description: "Try aiohttp/aiodns"
-date:       "2019-01-23"
+date:       2019-01-23
 tags:
     - Aiohttp
     - Asynchronous
     - Troubleshooting
     - Python
     - Web
-published: true
+publishDate: 2019-01-23
 image:      ""
 categories:
     - Code

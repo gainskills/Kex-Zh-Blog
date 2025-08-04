@@ -3,13 +3,13 @@ layout:     post
 title:      "tc-How it work on different IPs"
 subtitle:   ""
 description: "A sample"
-date:       "2017-09-22"
+date:       2017-09-22
 tags:
     - Tip
     - Linux
     - tc
     - Traffic Control
-published: true
+publishDate: 2017-09-22
 image:      ""
 categories:
     - OS

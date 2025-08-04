@@ -3,13 +3,13 @@ title:      "make error :/usr/bin/ld: cannot find -luuid"
 subtitle:   ""
 description: "A compile error"
 date:       2013-11-05
-tags: 
+tags:
     - Troubleshooting
     - Linux
     - Compile
     - Make
     - CentOS
-published: true 
+publishDate: 2013-11-05
 image:      ""
 categories:
     - OS

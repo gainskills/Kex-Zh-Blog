@@ -7,7 +7,7 @@ tags:
     - Tip
     - operator
     - Python
-published: true
+publishDate: 2018-12-21
 image:      ""
 categories:
     - Code

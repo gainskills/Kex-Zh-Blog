@@ -3,14 +3,14 @@ layout:     post
 title:      "Hugo-Versioning"
 subtitle:   ""
 description: "Hugo tutorials"
-date:       "2019-01-27"
+date:       2019-01-27
 tags:
     - Hugo
     - Blog
     - Git
     - Tip
     - Web
-published: true
+publishDate: 2019-01-27
 image:      ""
 # postWithImg: true
 categories:

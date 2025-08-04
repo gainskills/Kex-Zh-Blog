@@ -5,7 +5,7 @@ description: "A sample about Jekins parameterized project"
 date:       2018-12-26
 tags:
     - Jenkins
-published: true
+publishDate: 2018-12-26
 image:      ""
 postWithImg: true
 categories:

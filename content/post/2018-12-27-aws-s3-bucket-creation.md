@@ -7,7 +7,7 @@ tags:
     - AWS
     - Troubleshooting
     - Python
-published: true
+publishDate: 2018-12-27
 image:      ""
 categories:
     - DevOps

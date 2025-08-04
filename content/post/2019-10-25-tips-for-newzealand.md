@@ -7,7 +7,7 @@ date:       2019-10-25
 lastmod:	2020-10-04
 tags:
     - Tip
-published: true
+publishDate: 2019-10-25
 image:      ""
 categories:
     - Life
@@ -158,7 +158,7 @@ URL: "/2019/10/25/tips-for-newzealand/"
 	    * [Health Report](https://www.immigration.govt.nz/new-zealand-visas/apply-for-a-visa/tools-and-information/medical-info/when-you-need-an-x-ray-or-medical-examination) - 3年内因申请其它签证提交过的，可以不要再提交
 
 - 买房
-  
+
   	很多人会建议不要买老房子(针对2021年,老房子的标准是1945年之前的房子)会特别麻烦。具体的麻烦在于
 
     - 保险
@@ -188,7 +188,7 @@ URL: "/2019/10/25/tips-for-newzealand/"
 			* 发球时，确保视野内没有人
 
 	* 羽毛球
-  
+
 		羽毛球在奥克兰、惠灵顿特别受欢迎。
 
 		- Club

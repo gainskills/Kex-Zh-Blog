@@ -7,7 +7,7 @@ tags:
     - Jenkins
     - Xcode
     - Troubleshooting
-published: true
+publishDate: 2018-12-18
 image:      ""
 postWithImg: true
 categories:

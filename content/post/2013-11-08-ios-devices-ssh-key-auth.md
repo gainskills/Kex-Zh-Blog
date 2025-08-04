@@ -12,7 +12,7 @@ tags:
     - IOS
     - Putty
     - SecureCRT
-published: true
+publishDate: 2013-11-08
 image:      ""
 postWithImg: true
 categories:

@@ -8,7 +8,7 @@ tags:
     - Simulator
     - Cisco IPS
     - Security
-published: true
+publishDate: 2017-03-24
 image:      ""
 postWithImg: true
 categories:

@@ -7,7 +7,7 @@ tags:
     - Golang
 categories:
     - Code
-published: true
+publishDate: 2023-07-17
 postWithImg: true
 image:      ""
 showtoc: false
@@ -43,7 +43,7 @@ _Loop:
 }
 ```
 
-Issue: 
+Issue:
 
 1. CPU usage goes high with the code
 2. Did analysis with golang profile, and saw `runtime/internal/syscall.Syscall` is the root cause

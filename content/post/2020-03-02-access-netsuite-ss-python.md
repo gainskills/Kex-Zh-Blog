@@ -7,7 +7,7 @@ tags:
     - Oracle
     - NetSuite
     - Python
-published: false
+published: 2090-01-01
 image:      ""
 categories:
     - Code

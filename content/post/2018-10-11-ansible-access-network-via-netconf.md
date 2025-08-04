@@ -7,7 +7,7 @@ tags:
     - Ansible
     - Cisco
     - Python
-published: true
+publishDate: 2018-10-11
 image:      ""
 postWithImg: true
 categories:

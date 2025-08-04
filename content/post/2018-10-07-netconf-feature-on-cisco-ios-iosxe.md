@@ -11,7 +11,7 @@ tags:
     - NetConf
     - Troubleshooting
     - Python
-published: true
+publishDate: 2018-10-07
 image:      ""
 postWithImg: true
 categories:
