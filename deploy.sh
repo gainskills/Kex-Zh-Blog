@@ -5,13 +5,13 @@ rm -r -f ./public/*
 find . -name '.DS_Store' -type f -delete
 
 # Build the project, if using a theme, replace with `hugo -t <YOURTHEME>
-./hugo_osx/hugo -t hugo-theme-cleanwhite --quiet --cleanDestinationDir --minify --gc
+hugo -t hugo-theme-cleanwhite --quiet --cleanDestinationDir --minify --gc
 
 # add CNAME back
 echo "blog.gainskills.top" > public/CNAME
 # for google AD sense
-echo "google.com, pub-5029900143451942, DIRECT, f08c47fec0942fa0" > public/ads.txt
-echo "google.com, pub-5029900143451942, DIRECT, f08c47fec0942fa0" > docs/ads.txt
+echo "google.com, pub-2131169764685829, DIRECT, f08c47fec0942fa0" > public/ads.txt
+echo "google.com, pub-2131169764685829, DIRECT, f08c47fec0942fa0" > docs/ads.txt
 echo "algolia.json" > public/.gitignore
 
 # cp site maps, will remove this later
